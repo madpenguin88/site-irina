@@ -28,6 +28,7 @@
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Offset pentru navbar fixed */
 }
 
 body {

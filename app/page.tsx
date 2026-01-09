@@ -71,7 +71,7 @@ export default function Home() {
             {/* Right - Image */}
             <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gray-100">
               <Image
-                src="/pictures/IMG_4013.jpeg"
+                src="/pictures/carti.jpeg"
                 alt="Irina Gospodaru - Psihoterapeut"
                 fill
                 className="object-cover"
@@ -233,15 +233,12 @@ export default function Home() {
                 <h3 className="font-serif text-2xl text-gray-900 mb-4">Informații de Contact</h3>
                 <div className="space-y-3 font-sans text-gray-700">
                   <p className="flex items-center gap-3">
-                    <span className="font-semibold">📱 WhatsApp:</span>
+                    <span className="font-semibold">WhatsApp:</span>
                     <a href="https://wa.me/" className="hover:text-gray-900">+40 XXX XXX XXX</a>
                   </p>
+                
                   <p className="flex items-center gap-3">
-                    <span className="font-semibold">📞 Telefon:</span>
-                    <a href="tel:+40" className="hover:text-gray-900">+40 XXX XXX XXX</a>
-                  </p>
-                  <p className="flex items-center gap-3">
-                    <span className="font-semibold">📍 Adresă:</span>
+                    <span className="font-semibold">Adresă:</span>
                     <span>București, România</span>
                   </p>
                 </div>
@@ -251,11 +248,11 @@ export default function Home() {
                 <h3 className="font-serif text-2xl text-gray-900 mb-4">Social Media</h3>
                 <div className="space-y-3 font-sans text-gray-700">
                   <p className="flex items-center gap-3">
-                    <span className="font-semibold">📘 Facebook:</span>
+                    <span className="font-semibold">Facebook:</span>
                     <a href="#" className="hover:text-gray-900">@irinagospodaru</a>
                   </p>
                   <p className="flex items-center gap-3">
-                    <span className="font-semibold">📷 Instagram:</span>
+                    <span className="font-semibold">Instagram:</span>
                     <a href="#" className="hover:text-gray-900">@irinagospodaru</a>
                   </p>
                 </div>
