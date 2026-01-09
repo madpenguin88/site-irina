@@ -1,46 +1,37 @@
 @import "tailwindcss";
 
-@theme {
-  --color-cream: #FAF7F4;
-  --color-beige: #E8DED3;
-  --color-dusty-rose: #D4A5A5;
-  --color-soft-pink: #F2E5E5;
-  --color-warm-taupe: #C9B8A8;
-  --color-charcoal: #2C2C2C;
-  --color-warm-gray: #5A5A5A;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Custom Ava Fonts */
+  --font-open-sans: var(--font-open-sans, 'Open Sans', sans-serif);
+  --font-the-seasons: var(--font-the-seasons, 'Playfair Display', serif);
+  --font-beautifully-delicious: var(--font-beautifully-delicious, 'Playfair Display', serif);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-open-sans);
+  --font-serif: var(--font-the-seasons);
+  --font-script: var(--font-beautifully-delicious);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 body {
-  background: #FAF7F4;
-  color: #2C2C2C;
-  line-height: 1.7;
-  letter-spacing: 0.02em;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-open-sans);
 }
 
+/* Typography using imported fonts */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  line-height: 1.3;
-  letter-spacing: 0.01em;
-  color: #2C2C2C;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  font-family: var(--font-the-seasons);
 }
