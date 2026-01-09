@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans, Cormorant_Garamond, Playfair_Display } from "next/font/google";
+import { Open_Sans, Cormorant_Garamond, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
 // Open Sans - Regular sans-serif font
@@ -10,25 +10,25 @@ const openSans = Open_Sans({
   display: "swap",
 });
 
-// The Seasons - Using Playfair Display as elegant serif alternative
-const theSeasons = Playfair_Display({
+// The Seasons - Using Cormorant Garamond as elegant serif
+const theSeasons = Cormorant_Garamond({
   variable: "--font-the-seasons",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
-// Beautifully Delicious Script - Using Dancing Script as elegant script alternative
-const beautifullyDelicious = Playfair_Display({
-  variable: "--font-beautifully-delicious",
+// Handwriting Style - Using Great Vibes for elegant handwritten look
+const handwritingFont = Great_Vibes({
+  variable: "--font-handwriting",
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Ava - Transformă-ți Viziunea",
-  description: "Coaching și mentorat pentru antreprenori și creatori de conținut",
+  title: "Irina Gospodaru - Psihoterapeut Adlerian",
+  description: "Psiholog clinician și psihoterapeut cu orientare adleriană. Psihoterapie individuală, de cuplu și familie. Cabinet în București.",
 };
 
 export default function RootLayout({
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <body
-        className={`${openSans.variable} ${theSeasons.variable} ${beautifullyDelicious.variable} antialiased`}
+        className={`${openSans.variable} ${theSeasons.variable} ${handwritingFont.variable} antialiased`}
       >
         {children}
       </body>

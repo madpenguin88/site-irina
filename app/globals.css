@@ -6,8 +6,8 @@
   
   /* Custom Ava Fonts */
   --font-open-sans: var(--font-open-sans, 'Open Sans', sans-serif);
-  --font-the-seasons: var(--font-the-seasons, 'Playfair Display', serif);
-  --font-beautifully-delicious: var(--font-beautifully-delicious, 'Playfair Display', serif);
+  --font-the-seasons: var(--font-the-seasons, 'Cormorant Garamond', serif);
+  --font-handwriting: var(--font-handwriting, 'Caveat', cursive);
 }
 
 @theme inline {
@@ -15,7 +15,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-open-sans);
   --font-serif: var(--font-the-seasons);
-  --font-script: var(--font-beautifully-delicious);
+  --font-script: var(--font-handwriting);
 }
 
 @media (prefers-color-scheme: dark) {
