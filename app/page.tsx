@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BackToTop from "./components/BackToTop";
 
 export default function Home() {
   return (
@@ -41,8 +42,11 @@ export default function Home() {
         </div>
       </nav>
 
+      {/* Back to Top Button */}
+      <BackToTop />
+
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-32 pb-20 px-6" id="top">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left - Text */}
