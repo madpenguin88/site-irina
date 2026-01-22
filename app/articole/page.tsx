@@ -18,7 +18,10 @@ export default function ArticolePage() {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/#despre" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+              ACASĂ
+            </Link>
+            <Link href="/despre" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               DESPRE MINE
             </Link>
             <Link href="/articole" className="font-sans text-sm text-gray-900 font-semibold transition-colors">

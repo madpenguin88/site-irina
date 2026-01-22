@@ -25,9 +25,12 @@ export default function Home() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#despre" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+              ACASĂ
+            </Link>
+            <Link href="/despre" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               DESPRE MINE
-            </a>
+            </Link>
             <Link href="/articole" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               ARTICOLE
             </Link>
@@ -64,13 +67,20 @@ export default function Home() {
         {/* Mobile Menu */}
         <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="px-6 py-4 space-y-4 bg-white/95 backdrop-blur-sm border-t border-gray-200">
-            <a 
-              href="#despre" 
+            <Link 
+              href="/" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+            >
+              ACASĂ
+            </Link>
+            <Link 
+              href="/despre" 
               onClick={() => setMobileMenuOpen(false)}
               className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
             >
               DESPRE MINE
-            </a>
+            </Link>
             <Link 
               href="/articole"
               onClick={() => setMobileMenuOpen(false)}
@@ -137,7 +147,7 @@ export default function Home() {
             {/* Right - Image */}
             <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gray-100">
               <Image
-                src="/pictures/carti.jpeg"
+                src="/pictures/ryota.office_10205_eminine_minimalist_office_desk_soft_natura_62883677-b8b3-47e9-b57a-e8f359e49992_1.png"
                 alt="Irina Gospodaru - Psihoterapeut"
                 fill
                 className="object-cover"
@@ -175,19 +185,17 @@ export default function Home() {
             {/* Right - Text */}
             <div className="space-y-6 font-sans text-lg text-gray-700 leading-relaxed md:pt-8">
               <p>
-                Sunt Irina Gospodaru, psiholog clinician și psihoterapeut cu orientare adleriană. 
-                Lucrez cu adulți, copii și adolescenți, oferind sprijin în diverse situații de viață: 
-                anxietate, depresie, probleme de relație, dezvoltare personală și multe altele.
+                Sunt Irina Gospodaru, psiholog clinician și psihoterapeut adlerian.
               </p>
               <p>
-                Cred că fiecare persoană are în ea resurse unice de vindecare și dezvoltare. 
-                Rolul meu este să te ghidez și să îți ofer un spațiu sigur în care să explorezi, 
-                să înțelegi și să depășești provocările cu care te confrunți.
+                Am ales această vocație pentru că vreau să fiu alături de oameni în momentele în care decid să facă schimbări reale în viața lor - schimbări pe care le pot simți și observa cu adevărat. Îmi doresc ca fiecare persoană cu care lucrez să poată depăși situațiile provocatoare din viața sa și să simtă o evoluție reală, atât pentru sine, cât și în relațiile cu cei apropiați și în relațiile sociale.
               </p>
-              <p>
-                Abordarea mea terapeutică este centrată pe persoană, empatică și non-judecătoare. 
-                Împreună vom lucra pentru a descoperi soluții și strategii care funcționează pentru tine.
-              </p>
+              <Link 
+                href="/despre"
+                className="inline-block px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
+              >
+                Află mai mult despre mine
+              </Link>
             </div>
           </div>
         </div>
@@ -198,7 +206,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/pictures/cabinet.jpg"
+            src="/pictures/ryota.office_10205_Low_wooden_coffee_table_in_therapy_room_sm_2e8a5a14-0d15-4286-9ed3-99ee651e367a_3.png"
             alt="Cabinet Psihoterapie"
             fill
             className="object-cover"
