@@ -76,7 +76,7 @@ export default function IntrebariPage() {
       {/* Full Page Background Image */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/pictures/ryota.office_10205_minimalist_grey_sofa_with_pampas_grass_in__13b95de8-53b5-40ac-bebf-16552ac5cc15_1.png"
+          src="/pictures/inima.jpeg"
           alt="Background"
           fill
           className="object-cover"

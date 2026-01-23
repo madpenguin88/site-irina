@@ -128,11 +128,11 @@ export default function DesprePage() {
         <div className="max-w-6xl mx-auto">
           {/* Header with Photo */}
           <div className="mb-16">
-            <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
               {/* Left - Stacked Images */}
-              <div className="relative h-[600px]">
-                {/* Background image - larger, positioned back */}
-                <div className="absolute top-0 right-0 md:right-8 w-[280px] h-[380px] overflow-hidden rounded-2xl shadow-2xl z-10">
+              <div className="relative h-[340px] md:h-[550px] order-2 md:order-1">
+                {/* Background accent image - smaller, positioned back */}
+                <div className="absolute top-0 right-4 md:right-4 w-[160px] md:w-[240px] h-[200px] md:h-[320px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl z-10">
                   <Image
                     src="/pictures/ryota.office_10205_Professional_psychology_office_bookshelf_c_641c8950-eb68-4d61-b8c2-d7b3b4ed7768_0.png"
                     alt="Psychology Office Interior"
@@ -141,8 +141,8 @@ export default function DesprePage() {
                   />
                 </div>
                 
-                {/* Main profile image - positioned in front */}
-                <div className="absolute bottom-0 left-0 md:left-8 w-[300px] h-[420px] overflow-hidden rounded-2xl shadow-2xl z-20 border-8 border-white">
+                {/* Main profile image - positioned in front, larger */}
+                <div className="absolute top-[100px] md:bottom-0 left-4 md:left-0 w-[220px] md:w-[340px] h-[240px] md:h-[440px] overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl z-20 border-4 md:border-8 border-white">
                   <Image
                     src="/pictures/irina.jpeg"
                     alt="Irina Gospodaru - Psihoterapeut Adlerian"
@@ -150,22 +150,12 @@ export default function DesprePage() {
                     className="object-cover"
                   />
                 </div>
-                
-                {/* Small accent image - top left corner */}
-                <div className="absolute top-40 left-2 md:left-0 w-[180px] h-[220px] overflow-hidden rounded-xl shadow-xl z-5 opacity-90">
-                  <Image
-                    src="/pictures/ryota.office_10205_Detailed_close-up_of_therapy_bookshelf_wit_df48ae74-2159-4e8b-89ff-c6741be76c18_1.png"
-                    alt="Therapy Books Detail"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
               </div>
 
               {/* Right - Intro Text */}
-              <div className="space-y-8 md:pt-12">
+              <div className="space-y-6 pt-0 md:pt-12 order-1 md:order-2">
                 <div>
-                  <h1 className="font-serif text-5xl md:text-6xl text-gray-900 mb-4">
+                  <h1 className="font-serif text-4xl md:text-6xl text-gray-900 mb-4">
                     Despre Mine
                   </h1>
                   <div className="flex items-center gap-3 mb-6">
@@ -198,8 +188,8 @@ export default function DesprePage() {
               Cred că schimbarea reală nu se întâmplă doar în cabinet, ci atunci când se extinde în viața de zi cu zi.
             </p>
 
-            {/* Section 1: Text Left, Images Right with stacking */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            {/* Section 1: Text Left, Image Right */}
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
               <div className="space-y-5">
                 <h3 className="font-serif text-3xl text-gray-900">
                   Cu adolescenții și familiile lor
@@ -212,31 +202,21 @@ export default function DesprePage() {
                 </p>
               </div>
               
-              {/* Stacked images on right */}
-              <div className="relative h-[450px]">
-                <div className="absolute top-0 left-0 w-[280px] h-[320px] overflow-hidden rounded-2xl shadow-xl z-10">
-                  <Image
-                    src="/pictures/ryota.office_10205_minimalist_feminine_workspace_hands_typing_fb8445b8-9ecb-4c4a-a597-ea6cd7b8c704_0.png"
-                    alt="Workspace Detail"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute bottom-0 right-0 w-[300px] h-[280px] overflow-hidden rounded-2xl shadow-2xl z-20 border-4 border-white">
-                  <Image
-                    src="/pictures/ryota.office_10205_Low_wooden_coffee_table_in_therapy_room_sm_aaac57b2-1fef-479e-a4eb-a3178fcb82d1_1.png"
-                    alt="Therapy Room Detail"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+              {/* Image on right - smaller on mobile */}
+              <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
+                <Image
+                  src="/pictures/ryota.office_10205_Low_wooden_coffee_table_in_therapy_room_sm_aaac57b2-1fef-479e-a4eb-a3178fcb82d1_1.png"
+                  alt="Therapy Room Detail"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
-            {/* Section 2: Images Left, Text Right */}
+            {/* Section 2: Image Left, Text Right */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-              {/* Single large image on left */}
-              <div className="relative h-[400px] overflow-hidden rounded-2xl shadow-xl">
+              {/* Single image on left - hidden on mobile */}
+              <div className="hidden md:block relative h-[350px] overflow-hidden rounded-2xl shadow-xl">
                 <Image
                   src="/pictures/ryota.office_10205_Low_wooden_coffee_table_in_therapy_room_sm_2e8a5a14-0d15-4286-9ed3-99ee651e367a_0.png"
                   alt="Therapy Environment"
@@ -258,8 +238,8 @@ export default function DesprePage() {
               </div>
             </div>
 
-            {/* Section 3: Text Left, Image Right with subtle stacking */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            {/* Section 3: Text Left, Image Right */}
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
               <div className="space-y-5">
                 <h3 className="font-serif text-3xl text-gray-900">
                   În terapia individuală
@@ -272,47 +252,27 @@ export default function DesprePage() {
                 </p>
               </div>
               
-              {/* Overlapping images on right */}
-              <div className="relative h-[420px]">
-                <div className="absolute top-0 right-4 w-[260px] h-[240px] overflow-hidden rounded-xl shadow-lg z-10 opacity-95">
-                  <Image
-                    src="/pictures/ryota.office_10205_minimalist_grey_sofa_with_pampas_grass_in__d051201d-76a8-40d6-8b02-e546187b1c08_1.png"
-                    alt="Therapy Setting"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 w-[300px] h-[300px] overflow-hidden rounded-2xl shadow-2xl z-20 border-4 border-white">
-                  <Image
-                    src="/pictures/ryota.office_10205_Low_wooden_coffee_table_in_therapy_room_sm_aaac57b2-1fef-479e-a4eb-a3178fcb82d1_2.png"
-                    alt="Therapy Space Detail"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+              {/* Image on right - smaller on mobile */}
+              <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
+                <Image
+                  src="/pictures/ryota.office_10205_minimalist_grey_sofa_with_pampas_grass_in__d051201d-76a8-40d6-8b02-e546187b1c08_1.png"
+                  alt="Therapy Setting"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
-            {/* Final section: text with stacked images */}
+            {/* Final section: Image left, text right */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Stacked images on left */}
-              <div className="relative h-[400px]">
-                <div className="absolute top-4 left-4 w-[240px] h-[280px] overflow-hidden rounded-xl shadow-lg z-10">
-                  <Image
-                    src="/pictures/ryota.office_10205_stack_of_elegant_books_on_neutral_beige_ba_a9227d92-43c3-48ef-985c-d4037f5762f6_1.png"
-                    alt="Books Stack"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute bottom-0 right-0 w-[280px] h-[260px] overflow-hidden rounded-2xl shadow-2xl z-20 border-4 border-white">
-                  <Image
-                    src="/pictures/ryota.office_10205_inimalist_help_concept_hands_holding_open__422686a4-43c1-4f5b-9ed0-dfee1ade9039_2.png"
-                    alt="Therapeutic Approach"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+              {/* Single image on left - hidden on mobile */}
+              <div className="hidden md:block relative h-[350px] overflow-hidden rounded-2xl shadow-xl">
+                <Image
+                  src="/pictures/ryota.office_10205_inimalist_help_concept_hands_holding_open__422686a4-43c1-4f5b-9ed0-dfee1ade9039_2.png"
+                  alt="Therapeutic Approach"
+                  fill
+                  className="object-cover"
+                />
               </div>
               
               <div className="space-y-5">
@@ -364,38 +324,6 @@ export default function DesprePage() {
                     <span>Licență în Business Management (4 ani) - Canterbury Christ Church University, UK</span>
                   </li>
                 </ul>
-              </div>
-
-              {/* Images stacked */}
-              <div className="relative h-[420px] hidden md:block">
-                <div className="absolute top-0 right-8 w-[240px] h-[280px] overflow-hidden rounded-xl shadow-lg z-10">
-                  <Image
-                    src="/pictures/ryota.office_10205_Macro_shot_of_psychology_office_bookshelf__25f76c39-eac6-4799-ab5b-b26586774cfe_1.png"
-                    alt="Psychology Books"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 w-[280px] h-[300px] overflow-hidden rounded-2xl shadow-2xl z-20 border-4 border-white">
-                  <Image
-                    src="/pictures/ryota.office_10205_etailed_close-up_of_therapy_books_on_woode_d08d5f5f-861c-4de2-91a4-f519d3dcbba1_1.png"
-                    alt="Therapy Books Detail"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
-              {/* Image on left */}
-              <div className="relative h-[350px] overflow-hidden rounded-2xl shadow-xl hidden md:block">
-                <Image
-                  src="/pictures/ryota.office_10205_eminine_workspace_top_view_planner_open_wi_8d1fae5d-75d4-4d2d-8ac1-203e088d2731_1.png"
-                  alt="Study Workspace"
-                  fill
-                  className="object-cover"
-                />
               </div>
 
               {/* Text - Post-universitară */}

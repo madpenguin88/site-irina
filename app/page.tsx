@@ -206,7 +206,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/pictures/ryota.office_10205_Low_wooden_coffee_table_in_therapy_room_sm_2e8a5a14-0d15-4286-9ed3-99ee651e367a_3.png"
+            src="/pictures/ryota.office_10205_minimalist_grey_sofa_with_pampas_grass_in__13b95de8-53b5-40ac-bebf-16552ac5cc15_1.png"
             alt="Cabinet Psihoterapie"
             fill
             className="object-cover"
