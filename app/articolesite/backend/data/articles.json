@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1138d50f-f841-48c1-955a-c99ea65f4348",
+    "title": "Test",
+    "slug": "test",
+    "content": "testestestestest",
+    "excerpt": "Test",
+    "imageUrl": "http://localhost:3001/uploads/64fa48a8-0bc9-4961-9d3c-b29c7ffd6582.jpg",
+    "author": "Irina Gospodaru",
+    "published": true,
+    "createdAt": "2026-01-23T12:56:43.366Z",
+    "updatedAt": "2026-01-23T12:56:43.366Z"
+  }
+]
