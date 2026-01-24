@@ -281,7 +281,7 @@ export default function ServiciiPage() {
             {/* Image on right - smaller on mobile */}
             <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
               <Image
-                src="/pictures/functioneaza.png"
+                src="/pictures/functioneaza.jpg"
                 alt="Cabinet Terapie"
                 fill
                 className="object-cover"

@@ -134,7 +134,7 @@ export default function DesprePage() {
                 {/* Main profile image - centered */}
                 <div className="relative w-[220px] md:w-[340px] h-[240px] md:h-[440px] overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border-4 md:border-8 border-white">
                   <Image
-                    src="/pictures/irina.jpeg"
+                    src="/pictures/irina.jpg"
                     alt="Irina Gospodaru - Psihoterapeut Adlerian"
                     fill
                     className="object-cover"
@@ -198,7 +198,7 @@ export default function DesprePage() {
               {/* Image on right - smaller on mobile */}
               <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
                 <Image
-                  src="/pictures/parinti.jpeg"
+                  src="/pictures/parinti.jpg"
                   alt="Therapy Room Detail"
                   fill
                   className="object-cover"
@@ -214,7 +214,7 @@ export default function DesprePage() {
               {/* Single image on left - visible on mobile, shown after text on mobile */}
               <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl order-2 md:order-1">
                 <Image
-                  src="/pictures/cuplu.jpeg"
+                  src="/pictures/cuplu.jpg"
                   alt="Therapy Environment"
                   fill
                   className="object-cover"
@@ -254,7 +254,7 @@ export default function DesprePage() {
               {/* Image on right - smaller on mobile */}
               <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
                 <Image
-                  src="/pictures/individual.jpeg"
+                  src="/pictures/individual.jpg"
                   alt="Therapy Setting"
                   fill
                   className="object-cover"

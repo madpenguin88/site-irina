@@ -95,7 +95,7 @@ export default function IntrebariPage() {
         }}
       >
         <Image
-          src="/pictures/inima.jpeg"
+          src="/pictures/inima.jpg"
           alt="Background"
           fill
           className="object-cover"

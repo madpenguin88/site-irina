@@ -147,7 +147,7 @@ export default function Home() {
             {/* Right - Image */}
             <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gray-100">
               <Image
-                src="/pictures/hands.jpeg"
+                src="/pictures/hands.jpg"
                 alt="Irina Gospodaru - Psihoterapeut"
                 fill
                 className="object-cover"
