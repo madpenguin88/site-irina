@@ -316,7 +316,7 @@ export default function DesprePage() {
             <h2 className="font-serif text-3xl text-white mb-4">
               Hai să vorbim
             </h2>
-            <p className="font-sans text-lg text-white-100 mb-8">
+            <p className="font-sans text-lg text-white mb-8">
               Mă poți contacta dacă simți nevoia unui spațiu sigur pentru a explora ce te preocupă.
             </p>
             <Link 
