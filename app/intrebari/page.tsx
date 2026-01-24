@@ -100,6 +100,8 @@ export default function IntrebariPage() {
           fill
           className="object-cover"
           priority
+          quality={75}
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-white/30"></div>
       </div>

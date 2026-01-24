@@ -285,6 +285,9 @@ export default function ServiciiPage() {
                 alt="Cabinet Terapie"
                 fill
                 className="object-cover"
+                quality={80}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

@@ -138,6 +138,9 @@ export default function DesprePage() {
                     alt="Irina Gospodaru - Psihoterapeut Adlerian"
                     fill
                     className="object-cover"
+                    priority
+                    quality={85}
+                    sizes="(max-width: 768px) 220px, 340px"
                   />
                 </div>
               </div>
@@ -199,6 +202,9 @@ export default function DesprePage() {
                   alt="Therapy Room Detail"
                   fill
                   className="object-cover"
+                  loading="lazy"
+                  quality={80}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
@@ -212,6 +218,9 @@ export default function DesprePage() {
                   alt="Therapy Environment"
                   fill
                   className="object-cover"
+                  loading="lazy"
+                  quality="80"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               
@@ -249,6 +258,9 @@ export default function DesprePage() {
                   alt="Therapy Setting"
                   fill
                   className="object-cover"
+                  loading="lazy"
+                  quality={80}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>

@@ -152,6 +152,8 @@ export default function Home() {
                 fill
                 className="object-cover"
                 priority
+                quality={85}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
