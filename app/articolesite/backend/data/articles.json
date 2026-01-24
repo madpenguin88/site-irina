@@ -1,14 +1,38 @@
 [
   {
-    "id": "1138d50f-f841-48c1-955a-c99ea65f4348",
-    "title": "Test",
-    "slug": "test",
-    "content": "testestestestest",
-    "excerpt": "Test",
-    "imageUrl": "http://localhost:3001/uploads/64fa48a8-0bc9-4961-9d3c-b29c7ffd6582.jpg",
+    "id": "0f58c0b6-c7a2-4c9f-b2c4-7de47300e73a",
+    "title": "Cariera ta nu e o destinație. E o serie de alegeri.",
+    "slug": "cariera-ta-nu-e-o-destinatie-e-o-serie-de-alegeri",
+    "content": "Mulți oameni caută \"jobul perfect\" de parcă există undeva acolo, ascuns, așteptând să fie descoperit. Nu există. Există doar munca pe care o faci azi și felul în care alegi să o faci.\nObiectivele profesionale nu sunt puncte fixe pe o hartă. Sunt semne care îți arată direcția. Direcția contează mai mult decât viteza. Poți alerga foarte repede în direcția greșită și tot să nu ajungi nicăieri.\nSuccesul profesional nu vine din a fi cel mai bun. Vine din a fi constant, curios și dispus să înveți. Cei mai buni nu sunt cei mai talentați. Sunt cei care nu renunță când devine greu și care pun întrebări când nu știu.\nAici e adevărul incomod: Nu poți controla promovarea, salariul sau recunoașterea. Poți controla efortul, atitudinea și calitatea muncii tale. Concentrează-te pe ce poți controla. Restul vine sau nu vine. Dar tu vei fi în regulă oricum.\nMulți oameni așteaptă să se simtă motivați înainte să înceapă. Funcționează invers. Începi, apoi vine motivația. Acțiunea generează energie, nu invers. Un pas mic azi e mai valoros decât un plan perfect pentru mâine.\nCariera ta nu se construiește din realizări mari și rare. Se construiește din mici alegeri zilnice: să fii prezent în ședință, să termini ce ai promis, să ceri feedback, să ajuți un coleg fără să aștepți ceva în schimb.\nNu aștepta să fii \"gata\" pentru următorul pas. Nimeni nu e vreodată gata cu adevărat. Ești gata când începi, nu înainte. Competența vine făcând, nu pregătindu-te să faci.\nÎntreabă-te: Ce pot face azi care să mă apropie cu un milimetru de unde vreau să ajung? Apoi fă-o. Repetă mâine. Peste un an, vei fi undeva complet diferit.\n",
+    "excerpt": "",
+    "imageUrl": "http://localhost:3001/uploads/e7e993c6-458b-437b-9fd4-61d34329ac42.png",
     "author": "Irina Gospodaru",
     "published": true,
-    "createdAt": "2026-01-23T12:56:43.366Z",
-    "updatedAt": "2026-01-23T12:56:43.366Z"
+    "createdAt": "2026-01-23T16:13:05.114Z",
+    "updatedAt": "2026-01-23T16:15:27.489Z"
+  },
+  {
+    "id": "080877c9-9647-4621-a9ff-5e5142781db6",
+    "title": "Cine ești când nimeni nu se uită?",
+    "slug": "cine-esti-cand-nimeni-nu-se-uita",
+    "content": "Identitatea ta nu e ceea ce crezi că ești. E ceea ce alegi să devii în fiecare zi.\nConfundăm adesea identitatea cu rolurile pe care le jucăm: părinte, angajat, prieten. Dar tu nu ești rolurile tale. Rolurile se schimbă. Tu rămâi. Întrebarea e: ce rămâne când se schimbă totul în jurul tău?\nStima de sine nu vine din a fi perfect. Vine din a te accepta imperfect. Nu din a primi validare de la alții, ci din a te trata pe tine însuți cu același respect pe care îl oferi celor dragi. E simplă compasiune față de tine, nu narcisism.\nMajoritatea oamenilor așteaptă un moment magic când vor deveni \"versiunea finală\" a lor. Nu există așa ceva. Dezvoltarea personală nu e o destinație. E felul în care alegi să trăiești azi. Nu mâine. Nu după ce rezolvi problema X sau obții lucrul Y. Acum.\nIată un secret: devii ceea ce practici în fiecare zi. Dacă practici autocritica, devii expert în ea. Dacă practici curiozitatea, devii mai deschis. Dacă practici compasiunea, devii mai empatic. Nu e magie. E repetiție.\nDezvoltarea sinelui nu înseamnă să adaugi mai multe straturi de identitate. Înseamnă să dai jos straturile false și să ajungi la ceea ce a fost acolo mereu. La esența ta. La vocea aceea liniștită pe care o ignori când toți ceilalți vorbesc mai tare.\nNu te întreba \"Cine sunt eu?\" de parcă răspunsul e ascuns undeva în trecut. Întreabă-te \"Cine vreau să devin?\" și apoi ia cu tine decizia în fiecare dimineață când te trezești.\nPentru că identitatea nu e ceva pe care o descoperi. E ceva pe care o construiești. O alegere după alta. O zi după alta.\n",
+    "excerpt": "",
+    "imageUrl": "http://localhost:3001/uploads/b78fb531-46e3-4ae5-9fdd-0564e1d377df.png",
+    "author": "Irina Gospodaru",
+    "published": true,
+    "createdAt": "2026-01-23T16:15:17.854Z",
+    "updatedAt": "2026-01-23T16:15:17.854Z"
+  },
+  {
+    "id": "7d474ff7-f253-4ae2-9ac8-ab7263205828",
+    "title": "Cine ești?",
+    "slug": "cine-esti",
+    "content": "Identitatea ta nu e ceea ce crezi că ești. E ceea ce alegi să devii în fiecare zi.\nConfundăm adesea identitatea cu rolurile pe care le jucăm: părinte, angajat, prieten. Dar tu nu ești rolurile tale. Rolurile se schimbă. Tu rămâi. Întrebarea e: ce rămâne când se schimbă totul în jurul tău?\nStima de sine nu vine din a fi perfect. Vine din a te accepta imperfect. Nu din a primi validare de la alții, ci din a te trata pe tine însuți cu același respect pe care îl oferi celor dragi. E simplă compasiune față de tine, nu narcisism.\nMajoritatea oamenilor așteaptă un moment magic când vor deveni \"versiunea finală\" a lor. Nu există așa ceva. Dezvoltarea personală nu e o destinație. E felul în care alegi să trăiești azi. Nu mâine. Nu după ce rezolvi problema X sau obții lucrul Y. Acum.\nIată un secret: devii ceea ce practici în fiecare zi. Dacă practici autocritica, devii expert în ea. Dacă practici curiozitatea, devii mai deschis. Dacă practici compasiunea, devii mai empatic. Nu e magie. E repetiție.\nDezvoltarea sinelui nu înseamnă să adaugi mai multe straturi de identitate. Înseamnă să dai jos straturile false și să ajungi la ceea ce a fost acolo mereu. La esența ta. La vocea aceea liniștită pe care o ignori când toți ceilalți vorbesc mai tare.\nNu te întreba \"Cine sunt eu?\" de parcă răspunsul e ascuns undeva în trecut. Întreabă-te \"Cine vreau să devin?\" și apoi ia cu tine decizia în fiecare dimineață când te trezești.\nPentru că identitatea nu e ceva pe care o descoperi. E ceva pe care o construiești. O alegere după alta. O zi după alta.\n",
+    "excerpt": "",
+    "imageUrl": "http://localhost:3001/uploads/e4d60061-6281-4d52-a751-21c3e34f07e3.png",
+    "author": "Irina Gospodaru",
+    "published": true,
+    "createdAt": "2026-01-23T16:16:04.756Z",
+    "updatedAt": "2026-01-23T16:16:04.756Z"
   }
 ]

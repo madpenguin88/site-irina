@@ -15,7 +15,7 @@ export default function DesprePage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo / Brand */}
           <Link href="/" className="flex flex-col">
-            <h1 className="font-sans text-xl font-semibold text-gray-900">
+            <h1 className="text-md font-semibold text-gray-900" style={{ fontFamily: 'var(--font-cinzel)' }}>
               Irina Gospodaru
             </h1>
             <p className="font-script text-lg text-gray-600">
@@ -128,21 +128,11 @@ export default function DesprePage() {
         <div className="max-w-6xl mx-auto">
           {/* Header with Photo */}
           <div className="mb-16">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
-              {/* Left - Stacked Images */}
-              <div className="relative h-[340px] md:h-[550px] order-2 md:order-1">
-                {/* Background accent image - smaller, positioned back */}
-                <div className="absolute top-0 right-4 md:right-4 w-[160px] md:w-[240px] h-[200px] md:h-[320px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl z-10">
-                  <Image
-                    src="/pictures/ryota.office_10205_Professional_psychology_office_bookshelf_c_641c8950-eb68-4d61-b8c2-d7b3b4ed7768_0.png"
-                    alt="Psychology Office Interior"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                
-                {/* Main profile image - positioned in front, larger */}
-                <div className="absolute top-[100px] md:bottom-0 left-4 md:left-0 w-[220px] md:w-[340px] h-[240px] md:h-[440px] overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl z-20 border-4 md:border-8 border-white">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+              {/* Left - Centered Image */}
+              <div className="relative h-[340px] md:h-[550px] order-2 md:order-1 flex items-center justify-center">
+                {/* Main profile image - centered */}
+                <div className="relative w-[220px] md:w-[340px] h-[240px] md:h-[440px] overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border-4 md:border-8 border-white">
                   <Image
                     src="/pictures/irina.jpeg"
                     alt="Irina Gospodaru - Psihoterapeut Adlerian"
@@ -156,11 +146,11 @@ export default function DesprePage() {
               <div className="space-y-6 pt-0 md:pt-12 order-1 md:order-2">
                 <div>
                   <h1 className="font-serif text-4xl md:text-6xl text-gray-900 mb-4">
-                    Despre Mine
+                    Despre mine
                   </h1>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="h-px w-16 bg-gray-300"></div>
-                    <p className="font-script text-2xl text-gray-600">Irina Gospodaru</p>
+                    
                   </div>
                 </div>
                 
@@ -172,7 +162,7 @@ export default function DesprePage() {
                     Am ales această vocație pentru că vreau să fiu alături de oameni în momentele în care decid să facă schimbări reale în viața lor - schimbări pe care le pot simți și observa cu adevărat.
                   </p>
                   <p>
-                    Îmi doresc ca fiecare persoană cu care lucrez să poată depăși situațiile provocatoare din viața sa și să simtă o evoluție reală, atât pentru sine, cât și în relațiile cu cei apropiați și în relațiile sociale.
+                    Îmi doresc ca fiecare persoană cu care lucrez să poată depăși situațiile provocatoare din viața sa și să simtă o evoluție reală, atât pentru sine, cât și în relațiile sociale.
                   </p>
                 </div>
               </div>
@@ -180,9 +170,9 @@ export default function DesprePage() {
           </div>
 
           {/* Cum lucrez */}
-          <section className="mb-16">
+          <section className="mb-16 bg-gray-50 rounded-3xl p-8 md:p-12">
             <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
-              Cum lucrez
+              Cum lucrez?
             </h2>
             <p className="font-sans text-lg text-gray-600 mb-16 text-center max-w-3xl mx-auto">
               Cred că schimbarea reală nu se întâmplă doar în cabinet, ci atunci când se extinde în viața de zi cu zi.
@@ -190,7 +180,7 @@ export default function DesprePage() {
 
             {/* Section 1: Text Left, Image Right */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
-              <div className="space-y-5">
+              <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm">
                 <h3 className="font-serif text-3xl text-gray-900">
                   Cu adolescenții și familiile lor
                 </h3>
@@ -205,7 +195,7 @@ export default function DesprePage() {
               {/* Image on right - smaller on mobile */}
               <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
                 <Image
-                  src="/pictures/ryota.office_10205_Low_wooden_coffee_table_in_therapy_room_sm_aaac57b2-1fef-479e-a4eb-a3178fcb82d1_1.png"
+                  src="/pictures/parinti.jpeg"
                   alt="Therapy Room Detail"
                   fill
                   className="object-cover"
@@ -215,17 +205,17 @@ export default function DesprePage() {
 
             {/* Section 2: Image Left, Text Right */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-              {/* Single image on left - hidden on mobile */}
-              <div className="hidden md:block relative h-[350px] overflow-hidden rounded-2xl shadow-xl">
+              {/* Single image on left - visible on mobile, shown after text on mobile */}
+              <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl order-2 md:order-1">
                 <Image
-                  src="/pictures/ryota.office_10205_Low_wooden_coffee_table_in_therapy_room_sm_2e8a5a14-0d15-4286-9ed3-99ee651e367a_0.png"
+                  src="/pictures/cuplu.jpeg"
                   alt="Therapy Environment"
                   fill
                   className="object-cover"
                 />
               </div>
               
-              <div className="space-y-5">
+              <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm order-1 md:order-2">
                 <h3 className="font-serif text-3xl text-gray-900">
                   În terapia de cuplu
                 </h3>
@@ -240,7 +230,7 @@ export default function DesprePage() {
 
             {/* Section 3: Text Left, Image Right */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
-              <div className="space-y-5">
+              <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm">
                 <h3 className="font-serif text-3xl text-gray-900">
                   În terapia individuală
                 </h3>
@@ -255,7 +245,7 @@ export default function DesprePage() {
               {/* Image on right - smaller on mobile */}
               <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
                 <Image
-                  src="/pictures/ryota.office_10205_minimalist_grey_sofa_with_pampas_grass_in__d051201d-76a8-40d6-8b02-e546187b1c08_1.png"
+                  src="/pictures/individual.jpeg"
                   alt="Therapy Setting"
                   fill
                   className="object-cover"
@@ -263,22 +253,9 @@ export default function DesprePage() {
               </div>
             </div>
 
-            {/* Final section: Image left, text right */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Single image on left - hidden on mobile */}
-              <div className="hidden md:block relative h-[350px] overflow-hidden rounded-2xl shadow-xl">
-                <Image
-                  src="/pictures/ryota.office_10205_inimalist_help_concept_hands_holding_open__422686a4-43c1-4f5b-9ed0-dfee1ade9039_2.png"
-                  alt="Therapeutic Approach"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              
+            {/* Final section: Text only, centered */}
+            <div className="max-w-4xl mx-auto text-center bg-white p-8 md:p-12 rounded-2xl shadow-sm">
               <div className="space-y-5">
-                <h3 className="font-serif text-3xl text-gray-900">
-                  O abordare personalizată
-                </h3>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
                   În terapie, nu există formule universale - ceea ce funcționează pentru cineva poate să nu fie potrivit pentru altcineva.
                 </p>
@@ -300,56 +277,27 @@ export default function DesprePage() {
             
             <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
               {/* Text - Universitară */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-full">
                 <h3 className="font-serif text-2xl text-gray-900 mb-6">
                   Pregătire universitară
                 </h3>
-                <ul className="space-y-4 font-sans text-lg text-gray-700">
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Licență în Psihologie (3 ani) - Universitatea Ovidius, Constanța</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Master în Psihoterapii și Psihologie Clinică (2 ani) - Universitatea Tibiscus, Timișoara</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Licență în Business Management (4 ani) - Canterbury Christ Church University, UK</span>
-                  </li>
+                <ul className="space-y-4 font-sans text-lg text-gray-700 list-disc list-inside">
+                  <li>Licență în Business Management (4 ani) - Canterbury Christ Church University, UK</li>
+                  <li>Licență în Psihologie (3 ani) - Universitatea Ovidius, Constanța</li>
+                  <li>Master în Psihoterapii și Psihologie Clinică (2 ani) - Universitatea Tibiscus, Timișoara</li>
+      
                 </ul>
               </div>
 
               {/* Text - Post-universitară */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-full">
                 <h3 className="font-serif text-2xl text-gray-900 mb-6">
                   Pregătire post-universitară
                 </h3>
-                <ul className="space-y-4 font-sans text-lg text-gray-700">
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Formare în Psihoterapie Adleriană (2 ani) - Institutul Alfred Adler</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Supervizare în Psihoterapie Adleriană (2 ani, în curs) - Institutul Alfred Adler</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Supervizare în Psihologie Clinică (2 ani, în curs)</span>
-                  </li>
+                <ul className="space-y-4 font-sans text-lg text-gray-700 list-disc list-inside">
+                  <li>Formare în Psihoterapie Adleriană (2 ani) - Institutul Alfred Adler</li>
+                  <li>Supervizare în Psihoterapie Adleriană (2 ani, în curs) - Institutul Alfred Adler</li>
+                  <li>Supervizare în Psihologie Clinică (2 ani, în curs)</li>
                 </ul>
               </div>
             </div>
@@ -362,32 +310,18 @@ export default function DesprePage() {
             </div>
           </section>
 
-          {/* Detalii practice */}
-          <section className="mb-16">
-            <h2 className="font-serif text-3xl text-gray-900 mb-6">
-              Detalii practice
-            </h2>
-            <div className="font-sans text-lg text-gray-700 leading-relaxed space-y-4">
-              <p>
-                Sedințele psihologice le realizez în cabinetul meu din Constanța și online.
-              </p>
-              <p>
-                Sunt colaborator în Proiectul Ryota - Program de dezvoltare socială și emoțională, unde organizăm workshop-uri și programe care acoperă ariile psiho-sociale și emoționale pentru copii, adolescenți și adulți.
-              </p>
-            </div>
-          </section>
 
           {/* Call to action */}
-          <section className="bg-gray-900 rounded-2xl p-12 text-center">
+          <section className="bg-gray-800 rounded-4xl p-12 text-center">
             <h2 className="font-serif text-3xl text-white mb-4">
               Hai să vorbim
             </h2>
-            <p className="font-sans text-lg text-gray-300 mb-8">
+            <p className="font-sans text-lg text-white-100 mb-8">
               Mă poți contacta dacă simți nevoia unui spațiu sigur pentru a explora ce te preocupă.
             </p>
             <Link 
               href="/#contact"
-              className="inline-block px-8 py-4 bg-white text-gray-900 font-sans text-sm rounded-full hover:bg-gray-100 transition-colors"
+              className="inline-block px-8 py-4 bg-white text-gray-800 font-sans text-sm rounded-full hover:bg-emerald-50 transition-colors"
             >
               Contactează-mă
             </Link>

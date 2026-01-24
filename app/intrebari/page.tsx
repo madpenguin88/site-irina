@@ -2,11 +2,22 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function IntrebariPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const intrebari = [
     {
@@ -73,8 +84,16 @@ export default function IntrebariPage() {
 
   return (
     <div className="min-h-screen bg-white relative">
-      {/* Full Page Background Image */}
-      <div className="fixed inset-0 z-0">
+      {/* Full Page Background Image with Parallax */}
+      <div 
+        ref={bgRef}
+        className="fixed inset-0 z-0 h-[200vh]"
+        style={{
+          transform: `translateY(${scrollY * -0.15}px)`,
+          transition: 'transform 0.1s ease-out',
+          top: '-50vh'
+        }}
+      >
         <Image
           src="/pictures/inima.jpeg"
           alt="Background"
@@ -82,7 +101,7 @@ export default function IntrebariPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-white/55"></div>
+        <div className="absolute inset-0 bg-white/30"></div>
       </div>
 
       {/* Navbar */}
@@ -90,7 +109,7 @@ export default function IntrebariPage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo / Brand */}
           <Link href="/" className="flex flex-col">
-            <h1 className="font-sans text-xl font-semibold text-gray-900">
+            <h1 className="text-md font-semibold text-gray-900" style={{ fontFamily: 'var(--font-cinzel)' }}>
               Irina Gospodaru
             </h1>
             <p className="font-script text-lg text-gray-600">
@@ -112,7 +131,7 @@ export default function IntrebariPage() {
             <Link href="/intrebari" className="font-sans text-sm text-gray-900 font-semibold transition-colors">
               ÎNTREBĂRI
             </Link>
-            <Link href="/#servicii" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/servicii" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               SERVICII
             </Link>
             <Link href="/#colaborari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
@@ -171,7 +190,7 @@ export default function IntrebariPage() {
               ÎNTREBĂRI
             </Link>
             <Link 
-              href="/#servicii"
+              href="/servicii"
               onClick={() => setMobileMenuOpen(false)}
               className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
             >
@@ -198,22 +217,27 @@ export default function IntrebariPage() {
       {/* Content */}
       <div className="pt-32 pb-20 px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-6xl text-gray-900 mb-6 text-center">
-            Întrebări Frecvente
-          </h1>
-          <p className="font-sans text-lg text-gray-600 mb-12 text-center">
-            Răspunsuri la cele mai frecvente întrebări despre psihoterapie
-          </p>
+          <div className="mb-16 flex justify-center">
+            <div className="bg-white/30 backdrop-blur-sm rounded-3xl shadow-lg border border-white/30 p-10 md:p-14 max-w-3xl w-full">
+              <h1 className="font-sans text-4xl md:text-5xl text-gray-900 mb-4 font-bold tracking-tight text-center">
+                Întrebări Frecvente
+              </h1>
+              <div className="w-24 h-1 bg-gray-900 mx-auto mb-6 rounded-full"></div>
+              <p className="font-sans text-base md:text-lg text-gray-700 text-center leading-relaxed">
+                Răspunsuri la cele mai frecvente întrebări despre psihoterapie
+              </p>
+            </div>
+          </div>
           
           <div className="space-y-4 max-w-4xl mx-auto">
             {intrebari.map((item, index) => (
               <div 
                 key={index} 
-                className="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+                className="bg-white/30 backdrop-blur-sm rounded-3xl shadow-lg border border-white/30 overflow-hidden hover:shadow-xl transition-shadow"
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full text-left p-6 flex items-start justify-between gap-4 hover:bg-gray-100 transition-colors"
+                  className="w-full text-left p-6 flex items-start justify-between gap-4 hover:bg-white/10 transition-colors"
                 >
                   <h3 className="font-serif text-xl text-gray-900">
                     {item.intrebare}
@@ -243,12 +267,14 @@ export default function IntrebariPage() {
             ))}
           </div>
 
-          <Link 
-            href="/"
-            className="inline-block mt-12 px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
-          >
-            Înapoi la pagina principală
-          </Link>
+          <div className="flex justify-center">
+            <Link 
+              href="/"
+              className="inline-block mt-12 px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors shadow-lg"
+            >
+              Înapoi la pagina principală
+            </Link>
+          </div>
         </div>
       </div>
     </div>

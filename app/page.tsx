@@ -15,7 +15,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo / Brand */}
           <div className="flex flex-col">
-            <h1 className="font-sans text-xl font-semibold text-gray-900">
+            <h1 className="text-md font-semibold text-gray-900" style={{ fontFamily: 'var(--font-cinzel)' }}>
               Irina Gospodaru
             </h1>
             <p className="font-script text-lg text-gray-600">
@@ -25,7 +25,7 @@ export default function Home() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/" className="font-sans text-sm text-gray-900 font-semibold transition-colors">
               ACASĂ
             </Link>
             <Link href="/despre" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
@@ -70,7 +70,7 @@ export default function Home() {
             <Link 
               href="/" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+              className="block font-sans text-sm text-gray-900 font-semibold transition-colors py-2"
             >
               ACASĂ
             </Link>
@@ -134,7 +134,7 @@ export default function Home() {
                 <span className="block text-gray-600 mt-2">spațiul tău de vindecare</span>
               </h2>
               <p className="font-sans text-lg text-gray-600 leading-relaxed">
-                Sunt psiholog și psihoterapeut cu orientare adleriană, dedicată să te sprijin în procesul tău de dezvoltare personală și vindecare emoțională.
+                Sunt psiholog și psihoterapeut cu orientare adleriană, dedicată să te sprijin în procesul tău de dezvoltare personală și echilibrare emoțională.
               </p>
               <a 
                 href="#contact"
@@ -147,7 +147,7 @@ export default function Home() {
             {/* Right - Image */}
             <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gray-100">
               <Image
-                src="/pictures/ryota.office_10205_eminine_minimalist_office_desk_soft_natura_62883677-b8b3-47e9-b57a-e8f359e49992_1.png"
+                src="/pictures/hands.jpeg"
                 alt="Irina Gospodaru - Psihoterapeut"
                 fill
                 className="object-cover"
@@ -158,51 +158,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Despre Mine Section */}
-      <section id="despre" className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-12 text-center">
-            Despre Mine
-          </h2>
-          
-          <div className="grid md:grid-cols-[350px_1fr] gap-12 items-start">
-            {/* Left - Image Card */}
-            <div className="relative mx-auto">
-              <div className="relative h-[400px] w-[300px] overflow-hidden shadow-xl">
-                <Image
-                  src="/pictures/irina.jpeg"
-                  alt="Irina Gospodaru - Psihoterapeut Adlerian"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="mt-6 text-center">
-                <h3 className="font-serif text-2xl text-gray-900">Irina Gospodaru</h3>
-                <p className="font-script text-xl text-gray-600 mt-2">Psihoterapeut Adlerian</p>
-              </div>
-            </div>
-
-            {/* Right - Text */}
-            <div className="space-y-6 font-sans text-lg text-gray-700 leading-relaxed md:pt-8">
-              <p>
-                Sunt Irina Gospodaru, psiholog clinician și psihoterapeut adlerian.
-              </p>
-              <p>
-                Am ales această vocație pentru că vreau să fiu alături de oameni în momentele în care decid să facă schimbări reale în viața lor - schimbări pe care le pot simți și observa cu adevărat. Îmi doresc ca fiecare persoană cu care lucrez să poată depăși situațiile provocatoare din viața sa și să simtă o evoluție reală, atât pentru sine, cât și în relațiile cu cei apropiați și în relațiile sociale.
-              </p>
-              <Link 
-                href="/despre"
-                className="inline-block px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
-              >
-                Află mai mult despre mine
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Servicii Section */}
-      <section id="servicii" className="py-20 px-6 bg-white">
+      <section id="servicii" className="py-12 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
             Servicii
@@ -213,64 +170,64 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Service Card 1 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
               <h3 className="font-serif text-2xl text-gray-900 mb-3">
                 Evaluare Psihologică
               </h3>
               <p className="font-sans text-gray-600">
                 Evaluare completă pentru identificarea nevoilor și stabilirea unui plan terapeutic personalizat.
               </p>
-            </div>
+            </Link>
 
             {/* Service Card 2 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
               <h3 className="font-serif text-2xl text-gray-900 mb-3">
                 Psihoterapie Individuală
               </h3>
               <p className="font-sans text-gray-600">
                 Sesiuni individuale pentru anxietate, depresie, traume și dezvoltare personală.
               </p>
-            </div>
+            </Link>
 
             {/* Service Card 3 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
               <h3 className="font-serif text-2xl text-gray-900 mb-3">
                 Psihoterapie de Cuplu
               </h3>
               <p className="font-sans text-gray-600">
                 Îmbunătățirea comunicării și rezolvarea conflictelor în relația de cuplu.
               </p>
-            </div>
+            </Link>
 
             {/* Service Card 4 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
               <h3 className="font-serif text-2xl text-gray-900 mb-3">
                 Psihoterapie de Familie
               </h3>
               <p className="font-sans text-gray-600">
                 Sprijin pentru întreaga familie în depășirea dificultăților și îmbunătățirea relațiilor.
               </p>
-            </div>
+            </Link>
 
             {/* Service Card 5 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
               <h3 className="font-serif text-2xl text-gray-900 mb-3">
                 Consiliere Psihologică
               </h3>
               <p className="font-sans text-gray-600">
                 Sprijin pe termen scurt pentru situații specifice și luarea deciziilor importante.
               </p>
-            </div>
+            </Link>
 
             {/* Service Card 6 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all">
+            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
               <h3 className="font-serif text-2xl text-gray-900 mb-3">
                 Dezvoltare Personală
               </h3>
               <p className="font-sans text-gray-600">
                 Sesiuni pentru creșterea personală, îmbunătățirea stimei de sine și atingerea obiectivelor.
               </p>
-            </div>
+            </Link>
           </div>
 
           {/* Call to Action - Learn More */}
@@ -286,7 +243,7 @@ export default function Home() {
       </section>
 
       {/* Colaborări Section */}
-      <section id="colaborari" className="py-20 px-6 bg-white">
+      <section id="colaborari" className="py-12 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
             Colaborări
@@ -295,15 +252,26 @@ export default function Home() {
             Proiecte dedicate dezvoltării personale și emoționale
           </p>
           
-          <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 md:p-12 shadow-sm">
-            <div className="flex items-center gap-3 mb-6">
-              <h3 className="font-serif text-3xl md:text-4xl text-gray-900">
-                Ryota
-              </h3>
+          <div className="bg-red-50 to-white border border-gray-200 rounded-2xl p-8 md:p-12 shadow-sm">
+            <div className="flex items-center gap-4 mb-6">
+              <Image
+                src="/pictures/svgexport-1.svg"
+                alt="Ryota Logo"
+                width={60}
+                height={60}
+                className="flex-shrink-0"
+              />
+               <Image
+                src="/pictures/svgexport-3.svg"
+                alt="Ryota name Logo"
+                width={80}
+                height={70}
+                className="flex-shrink-0"
+              />
               <div className="h-px flex-1 bg-gray-200"></div>
             </div>
             
-            <p className="font-script text-xl text-gray-600 mb-6">
+            <p className="font-script text-2xl text-amber-900 mb-6">
               Program de Dezvoltare Socială și Emoțională
             </p>
             
@@ -312,8 +280,8 @@ export default function Home() {
                 Ryota este un proiect dedicat susținerii persoanelor care urmăresc acel sentiment unic de a avea impact pozitiv în societate.
               </p>
               
-              <div className="bg-white rounded-xl p-6 border-l-4 border-gray-900">
-                <p className="font-semibold text-gray-900 mb-2">
+              <div className="bg-white rounded-xl p-6 border-l-4 border-amber-900">
+                <p className="font-semibold text-amber-900 mb-2">
                   Scopul programului:
                 </p>
                 <p>
@@ -322,7 +290,7 @@ export default function Home() {
               </div>
               
               <p>
-                Programul include <strong>workshop-uri de prevenție</strong> și <strong>workshop-uri de intervenție</strong> (pentru adolescenți și adulți), precum și <strong>activități de dezvoltare personală</strong> pentru copii.
+                Programul include workshop-uri de prevenție și workshop-uri de intervenție (pentru adolescenți și adulți), precum și activități de dezvoltare personală pentru copii.
               </p>
             </div>
             

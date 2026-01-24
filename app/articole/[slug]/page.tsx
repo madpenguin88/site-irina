@@ -71,7 +71,7 @@ export default function ArticlePage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo / Brand */}
           <Link href="/" className="flex flex-col">
-            <h1 className="font-sans text-xl font-semibold text-gray-900">
+            <h1 className="text-md font-semibold text-gray-900" style={{ fontFamily: 'var(--font-cinzel)' }}>
               Irina Gospodaru
             </h1>
             <p className="font-script text-lg text-gray-600">

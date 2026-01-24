@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans, Cormorant_Garamond, Great_Vibes } from "next/font/google";
+import { Open_Sans, Cormorant_Garamond, Great_Vibes, Cinzel } from "next/font/google";
 import "./globals.css";
 
 // Open Sans - Regular sans-serif font
@@ -26,6 +26,14 @@ const handwritingFont = Great_Vibes({
   display: "swap",
 });
 
+// Cinzel - Elegant serif font for quotes
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Irina Gospodaru - Psihoterapeut Adlerian",
   description: "Psiholog clinician și psihoterapeut cu orientare adleriană. Psihoterapie individuală, de cuplu și familie. Cabinet în București.",
@@ -39,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <body
-        className={`${openSans.variable} ${theSeasons.variable} ${handwritingFont.variable} antialiased`}
+        className={`${openSans.variable} ${theSeasons.variable} ${handwritingFont.variable} ${cinzel.variable} antialiased`}
       >
         {children}
       </body>

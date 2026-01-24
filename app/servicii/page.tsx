@@ -15,7 +15,7 @@ export default function ServiciiPage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo / Brand */}
           <Link href="/" className="flex flex-col">
-            <h1 className="font-sans text-xl font-semibold text-gray-900">
+            <h1 className="text-md font-semibold text-gray-900" style={{ fontFamily: 'var(--font-cinzel)' }}>
               Irina Gospodaru
             </h1>
             <p className="font-script text-lg text-gray-600">
@@ -209,60 +209,57 @@ export default function ServiciiPage() {
             <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
               Tarife
             </h2>
-            <p className="font-sans text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-              Prețurile sunt stabilite în funcție de timpul prestabilit împreună la programarea ședințelor
+            <p className="font-sans text-lg text-gray-600 mb-6 text-center max-w-4xl mx-auto">
+              Preventia psihologica este cea mai inteleapta investitie pe care o poti face in tine. <br />Este mult mai usor sa rezolvi lucrurile cand abia incep sa te apese decat cand deja te coplesesc. <br />
+            </p>
+             <p className="text-md text-gray-600 mb-12 text-center max-w-4xl mx-auto" style={{ fontFamily: 'var(--font-cinzel)' }}>
+              <b>Nu astepta sa fie urgent ca sa devina important.</b>
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {/* Pricing Card 1 */}
-              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border-2 border-gray-200 text-center">
-                <div className="mb-4">
-                  <div className="font-serif text-5xl text-gray-900 mb-2">150</div>
-                  <div className="font-sans text-gray-600">RON / ședință</div>
+              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center transform md:scale-105 shadow-xl">
+                <div className="mb-2">
+                  <div className="font-serif text-3xl text-white mb-1">150</div>
+                  <div className="font-sans text-xl text-gray-300">RON / ședință</div>
                 </div>
-                <div className="h-px bg-gray-200 my-6"></div>
-                <div className="font-sans text-lg font-semibold text-gray-900 mb-2">
+                <div className="h-px bg-gray-700 my-3"></div>
+                <div className="font-sans text-sm font-semibold text-white">
                   50 minute
                 </div>
-                <p className="font-sans text-sm text-gray-600">
-                  Ședință standard
-                </p>
+               
               </div>
 
               {/* Pricing Card 2 - Featured */}
-              <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border-2 border-gray-900 text-center transform md:scale-105 shadow-xl">
-                <div className="mb-4">
-                  <div className="font-serif text-5xl text-white mb-2">200</div>
-                  <div className="font-sans text-gray-300">RON / ședință</div>
+              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center transform md:scale-105 shadow-xl">
+                <div className="mb-2">
+                  <div className="font-serif text-3xl text-white mb-1">200</div>
+                  <div className="font-sans text-xl text-gray-300">RON / ședință</div>
                 </div>
-                <div className="h-px bg-gray-700 my-6"></div>
-                <div className="font-sans text-lg font-semibold text-white mb-2">
+                <div className="h-px bg-gray-700 my-3"></div>
+                <div className="font-sans text-sm font-semibold text-white">
                   75 minute
                 </div>
-                <p className="font-sans text-sm text-gray-300">
-                  Ședință extinsă
-                </p>
+          
               </div>
 
               {/* Pricing Card 3 */}
-              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border-2 border-gray-200 text-center">
-                <div className="mb-4">
-                  <div className="font-serif text-5xl text-gray-900 mb-2">250</div>
-                  <div className="font-sans text-gray-600">RON / ședință</div>
+              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center transform md:scale-105 shadow-xl">
+                <div className="mb-2">
+                  <div className="font-serif text-3xl text-white mb-1">250</div>
+                  <div className="font-sans text-xl text-gray-300">RON / ședință</div>
                 </div>
-                <div className="h-px bg-gray-200 my-6"></div>
-                <div className="font-sans text-lg font-semibold text-gray-900 mb-2">
+                <div className="h-px bg-gray-700 my-3"></div>
+                <div className="font-sans text-sm font-semibold text-white">
                   90 minute
                 </div>
-                <p className="font-sans text-sm text-gray-600">
-                  Ședință lungă
-                </p>
+             
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <p className="font-sans text-base text-gray-600 italic max-w-2xl mx-auto">
-                * Durata ședințelor se stabilește împreună la programare, în funcție de nevoile tale specifice și de tipul de terapie
+                * Durata ședințelor o stabilim împreună la programare, în funcție de nevoile tale specifice.
               </p>
             </div>
           </section>
@@ -271,7 +268,7 @@ export default function ServiciiPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-5">
               <h3 className="font-serif text-3xl text-gray-900">
-                Cum funcționează
+                Cum funcționează?
               </h3>
               <p className="font-sans text-lg text-gray-700 leading-relaxed">
                 Prima ședință este dedicată evaluării și cunoașterii reciproce. Împreună stabilim obiectivele terapiei și frecvența ședințelor.
@@ -284,7 +281,7 @@ export default function ServiciiPage() {
             {/* Image on right - smaller on mobile */}
             <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
               <Image
-                src="/pictures/ryota.office_10205_Low_wooden_coffee_table_in_therapy_room_sm_2e8a5a14-0d15-4286-9ed3-99ee651e367a_0.png"
+                src="/pictures/functioneaza.png"
                 alt="Cabinet Terapie"
                 fill
                 className="object-cover"
@@ -293,7 +290,7 @@ export default function ServiciiPage() {
           </div>
 
           {/* Call to action */}
-          <section className="bg-gray-900 rounded-2xl p-12 text-center">
+          <section className="bg-gray-800 rounded-2xl p-12 text-center">
             <h2 className="font-serif text-3xl text-white mb-4">
               Programează o ședință
             </h2>

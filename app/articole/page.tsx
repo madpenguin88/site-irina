@@ -23,6 +23,7 @@ export default function ArticolePage() {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     async function fetchArticles() {
@@ -60,7 +61,7 @@ export default function ArticolePage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo / Brand */}
           <Link href="/" className="flex flex-col">
-            <h1 className="font-sans text-xl font-semibold text-gray-900">
+            <h1 className="text-md font-semibold text-gray-900" style={{ fontFamily: 'var(--font-cinzel)' }}>
               Irina Gospodaru
             </h1>
             <p className="font-script text-lg text-gray-600">
@@ -82,13 +83,83 @@ export default function ArticolePage() {
             <Link href="/intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               ÎNTREBĂRI
             </Link>
-            <Link href="/#servicii" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/servicii" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               SERVICII
             </Link>
             <Link href="/#colaborari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               COLABORĂRI
             </Link>
             <Link href="/#contact" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+              CONTACT
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+            aria-label="Toggle menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="px-6 py-4 space-y-4 bg-white/95 backdrop-blur-sm border-t border-gray-200">
+            <Link 
+              href="/" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+            >
+              ACASĂ
+            </Link>
+            <Link 
+              href="/despre" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+            >
+              DESPRE MINE
+            </Link>
+            <Link 
+              href="/articole"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block font-sans text-sm text-gray-900 font-semibold transition-colors py-2"
+            >
+              ARTICOLE
+            </Link>
+            <Link 
+              href="/intrebari"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+            >
+              ÎNTREBĂRI
+            </Link>
+            <Link 
+              href="/servicii"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+            >
+              SERVICII
+            </Link>
+            <Link 
+              href="/#colaborari"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+            >
+              COLABORĂRI
+            </Link>
+            <Link 
+              href="/#contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
+            >
               CONTACT
             </Link>
           </div>
