@@ -12,12 +12,13 @@ interface Article {
   excerpt: string;
   imageUrl: string;
   author: string;
+  category: string;
   published: boolean;
   createdAt: string;
   updatedAt: string;
 }
 
-const API_URL = "https://apiirina.duckdns.org";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://apiirina.duckdns.org";
 
 export default function ArticolePage() {
   const [articles, setArticles] = useState<Article[]>([]);
@@ -34,7 +35,12 @@ export default function ArticolePage() {
         }
         const data = await response.json();
         // Only show published articles
-        const publishedArticles = data.filter((article: Article) => article.published);
+        const publishedArticles = data
+          .filter((article: Article) => article.published)
+          .map((article: Article) => ({
+            ...article,
+            category: article.category || "General",
+          }));
         setArticles(publishedArticles);
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
@@ -53,6 +59,15 @@ export default function ArticolePage() {
       day: "numeric",
     });
   };
+
+  const groupedArticles = articles.reduce<Record<string, Article[]>>((acc, article) => {
+    const category = article.category || "General";
+    if (!acc[category]) acc[category] = [];
+    acc[category].push(article);
+    return acc;
+  }, {});
+
+  const sortedCategories = Object.keys(groupedArticles).sort((a, b) => a.localeCompare(b, "ro"));
 
   return (
     <div className="min-h-screen bg-white">
@@ -206,41 +221,53 @@ export default function ArticolePage() {
 
           {/* Articles Grid */}
           {!loading && !error && articles.length > 0 && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {articles.map((article) => (
-                <article
-                  key={article.id}
-                  className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300"
-                >
-                  {article.imageUrl && article.imageUrl.trim() !== "" && (
-                    <div className="relative h-48 w-full">
-                      <Image
-                        src={article.imageUrl.startsWith("http") ? article.imageUrl : `${API_URL}${article.imageUrl}`}
-                        alt={article.title}
-                        fill
-                        className="object-cover"
-                        unoptimized
-                      />
-                    </div>
-                  )}
-                  <div className="p-6">
-                    <p className="font-sans text-sm text-gray-500 mb-2">
-                      {formatDate(article.createdAt)}
-                    </p>
-                    <h2 className="font-serif text-xl text-gray-900 mb-3 line-clamp-2">
-                      {article.title}
-                    </h2>
-                    <p className="font-sans text-gray-600 text-sm mb-4 line-clamp-3">
-                      {article.excerpt}
-                    </p>
-                    <Link
-                      href={`/articole/${article.slug}`}
-                      className="inline-block font-sans text-sm text-gray-900 font-medium hover:underline"
-                    >
-                      Citește mai mult →
-                    </Link>
+            <div className="space-y-12">
+              {sortedCategories.map((category) => (
+                <section key={category}>
+                  <h2 className="font-serif text-3xl text-gray-900 mb-6">
+                    {category}
+                  </h2>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {groupedArticles[category]
+                      .slice()
+                      .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
+                      .map((article) => (
+                        <article
+                          key={article.id}
+                          className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+                        >
+                          {article.imageUrl && article.imageUrl.trim() !== "" && (
+                            <div className="relative h-48 w-full">
+                              <Image
+                                src={article.imageUrl.startsWith("http") ? article.imageUrl : `${API_URL}${article.imageUrl}`}
+                                alt={article.title}
+                                fill
+                                className="object-cover"
+                                unoptimized
+                              />
+                            </div>
+                          )}
+                          <div className="p-6">
+                            <p className="font-sans text-sm text-gray-500 mb-2">
+                              {formatDate(article.createdAt)}
+                            </p>
+                            <h3 className="font-serif text-xl text-gray-900 mb-3 line-clamp-2">
+                              {article.title}
+                            </h3>
+                            <p className="font-sans text-gray-600 text-sm mb-4 line-clamp-3">
+                              {article.excerpt}
+                            </p>
+                            <Link
+                              href={`/articole/${article.slug}`}
+                              className="inline-block font-sans text-sm text-gray-900 font-medium hover:underline"
+                            >
+                              Citește mai mult →
+                            </Link>
+                          </div>
+                        </article>
+                      ))}
                   </div>
-                </article>
+                </section>
               ))}
             </div>
           )}

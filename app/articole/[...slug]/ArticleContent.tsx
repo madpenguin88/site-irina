@@ -12,12 +12,13 @@ interface Article {
   excerpt: string;
   imageUrl: string;
   author: string;
+  category: string;
   published: boolean;
   createdAt: string;
   updatedAt: string;
 }
 
-const API_URL = "https://apiirina.duckdns.org";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://apiirina.duckdns.org";
 
 export default function ArticleContent({ slug }: { slug: string }) {
   const [article, setArticle] = useState<Article | null>(null);
@@ -39,7 +40,10 @@ export default function ArticleContent({ slug }: { slug: string }) {
           throw new Error("Article not found");
         }
         
-        setArticle(foundArticle);
+        setArticle({
+          ...foundArticle,
+          category: foundArticle.category || "General",
+        });
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
@@ -145,6 +149,13 @@ export default function ArticleContent({ slug }: { slug: string }) {
                 <h1 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4">
                   {article.title}
                 </h1>
+                {article.category && (
+                  <div className="mb-3">
+                    <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-700 font-sans text-xs">
+                      {article.category}
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center gap-4 text-gray-500 font-sans text-sm">
                   <span>{formatDate(article.createdAt)}</span>
                   {article.author && (
