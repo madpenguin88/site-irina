@@ -230,7 +230,7 @@ export default function ArticolePage() {
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {groupedArticles[category]
                       .slice()
-                      .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
+                      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
                       .map((article) => (
                         <article
                           key={article.id}
@@ -248,6 +248,11 @@ export default function ArticolePage() {
                             </div>
                           )}
                           <div className="p-6">
+                            <div className="mb-2">
+                              <span className="inline-block px-2 py-1 rounded-md bg-gray-100 text-gray-600 font-sans text-xs">
+                                {article.category}
+                              </span>
+                            </div>
                             <p className="font-sans text-sm text-gray-500 mb-2">
                               {formatDate(article.createdAt)}
                             </p>
