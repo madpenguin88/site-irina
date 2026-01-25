@@ -17,7 +17,7 @@ interface Article {
   updatedAt: string;
 }
 
-const API_URL = "http://localhost:3001";
+const API_URL = "https://apiirina.duckdns.org";
 
 export default function ArticleContent({ slug }: { slug: string }) {
   const [article, setArticle] = useState<Article | null>(null);
