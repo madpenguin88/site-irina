@@ -21,20 +21,30 @@ ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 
 RUN npm run build
 
-# Production image with nginx
-FROM nginx:alpine AS runner
+# Production image, copy all the files and run next
+FROM base AS runner
+WORKDIR /app
 
-# Remove default nginx config
-RUN rm /etc/nginx/conf.d/default.conf
+ENV NODE_ENV=production
 
-# Copy custom nginx config
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
 
-# Copy built static files from Next.js
-COPY --from=builder /app/out /usr/share/nginx/html
+COPY --from=builder /app/public ./public
 
-# Expose port 80
-EXPOSE 80
+# Set the correct permission for prerender cache
+RUN mkdir .next
+RUN chown nextjs:nodejs .next
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Automatically leverage output traces to reduce image size
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
+EXPOSE 3000
+
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+CMD ["node", "server.js"]
