@@ -162,11 +162,9 @@ export default function DesprePage() {
                     Sunt psiholog clinician și psihoterapeut adlerian.
                   </p>
                   <p>
-                    Am ales această vocație pentru că vreau să fiu alături de oameni în momentele în care decid să facă schimbări reale în viața lor - schimbări pe care le pot simți și observa cu adevărat.
+                    Am ales această profesie pentru că vreau să fiu alături de oameni în momentele în care decid să facă schimbări reale în viața lor - schimbări pe care le pot simți și observa cu adevărat, să poată depăși situațiile provocatoare și să simtă o evoluție reală, atât pentru sine, cât și în relațiile sociale și profesionale.
                   </p>
-                  <p>
-                    Îmi doresc ca fiecare persoană cu care lucrez să poată depăși situațiile provocatoare din viața sa și să simtă o evoluție reală, atât pentru sine, cât și în relațiile sociale.
-                  </p>
+                  
                 </div>
               </div>
             </div>
@@ -232,7 +230,7 @@ export default function DesprePage() {
                   Abordarea este una comună - ambii parteneri contribuie activ la transformarea relației. Schimbările pe care le fac împreună devin vizibile în modul în care comunică, se înțeleg și se susțin reciproc.
                 </p>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Nu lucrez doar cu problemele, ci și cu resursele pe care le aveți deja ca pereche, construind pe ele pentru a crea o relație mai autentică și mai satisfăcătoare pentru amândoi.
+                  Nu lucrăm doar cu problemele, ci și cu resursele pe care le aveți deja ca pereche, construind pe ele pentru a crea o relație mai autentică și mai satisfăcătoare pentru amândoi.
                 </p>
               </div>
             </div>
@@ -244,10 +242,10 @@ export default function DesprePage() {
                   În terapia individuală
                 </h3>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Deși lucrez unu-la-unu cu clientul, țin cont de contextul său relațional - familie, prieteni, colegi, istoricul personal, resursele și oportunitățile de mediu, dar și de scopurile și direcția pe care și-o dorește în viață.
+                  Deși lucrăm împreună individual, țin cont de contextul tău relațional - familie, prieteni, colegi, istoricul tău personal, resursele și oportunitățile de mediu, dar și de scopurile și direcția pe care ți-o dorești în viață.
                 </p>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Ceea ce descoperă și schimbă în cabinet se reflectă apoi în toate relațiile sale importante, creând un efect de undă care transformă experiența sa în lume.
+                  Ceea ce descoperi și schimbi în cabinet se reflectă apoi în toate relațiile tale importante, creând un efect de undă care transformă experiența ta în lume.
                 </p>
               </div>
               
@@ -269,10 +267,10 @@ export default function DesprePage() {
             <div className="max-w-4xl mx-auto text-center bg-white p-8 md:p-12 rounded-2xl shadow-sm">
               <div className="space-y-5">
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  În terapie, nu există formule universale - ceea ce funcționează pentru cineva poate să nu fie potrivit pentru altcineva.
+                  În terapie, nu există formule universale - ceea ce funcționează pentru tine poate să nu fie potrivit pentru altcineva.
                 </p>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  De aceea, abordarea mea se centrează pe fiecare persoană în parte, pe ritmul și povestea sa unică. Clientul este expertul propriei vieți, iar eu sunt acolo să-l însoțesc în explorarea a ceea ce îl blochează, să analizăm împreună tiparele care nu-i mai sunt utile și să descopere noi direcții care au sens pentru evoluția sa.
+                  De aceea, abordarea mea se centrează pe fiecare persoană în parte, pe ritmul și povestea sa unică. Tu ești expertul propriei tale vieți, iar eu sunt acolo să te însoțesc în explorarea a ceea ce te blochează, să analizăm împreună tiparele care nu-ți mai sunt utile și să descoperi noi direcții care au sens pentru evoluția ta.
                 </p>
               </div>
             </div>
@@ -284,7 +282,7 @@ export default function DesprePage() {
               Pregătire profesională
             </h2>
             <p className="font-sans text-lg text-gray-600 mb-16 text-center max-w-3xl mx-auto">
-              O pregătire complexă și continuă pentru a oferi servicii de calitate
+             Pregătirea solidă și perfecționarea continuă sunt esențiale pentru un sprijin autentic și eficient.
             </p>
             
             <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
@@ -317,7 +315,7 @@ export default function DesprePage() {
             {/* Final note */}
             <div className="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 md:p-10 border-l-4 border-gray-900">
               <p className="font-sans text-lg text-gray-700 leading-relaxed italic">
-                De-a lungul timpului, mi-am aprofundat pregătirea participând la training-uri, prelegeri, workshop-uri și seminarii din abordarea adleriană națională și internațională, alături de specialiști cu experiență vastă în domeniul psihoterapiei, și voi continua să mă perfecționez pe tot parcursul carierei.
+               Particip constant la training-uri, workshop-uri și seminarii din abordarea adleriană, atât la nivel național, cât și internațional, alături de specialiști cu experiență vastă în domeniul psihoterapiei. Învățarea nu se oprește niciodată - mă voi perfecționa pe tot parcursul carierei pentru a-ți putea oferi cel mai bun suport posibil.
               </p>
             </div>
           </section>
@@ -329,7 +327,7 @@ export default function DesprePage() {
               Hai să vorbim
             </h2>
             <p className="font-sans text-lg text-white mb-8">
-              Mă poți contacta dacă simți nevoia unui spațiu sigur pentru a explora ce te preocupă.
+              Mă poți contacta dacă ești pregătit să faci primul pas spre schimbare.
             </p>
             <Link 
               href="/#contact"
