@@ -256,7 +256,7 @@ export default function DesprePage() {
                   alt="Therapy Setting"
                   fill
                   className="object-cover"
-                  loading="lazy"
+                  loading="eager"
                   quality={80}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

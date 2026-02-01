@@ -45,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ro">
+    <html lang="ro" data-scroll-behavior="smooth">
       <body
         className={`${openSans.variable} ${theSeasons.variable} ${handwritingFont.variable} ${cinzel.variable} antialiased`}
       >
