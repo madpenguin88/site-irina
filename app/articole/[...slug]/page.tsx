@@ -2,6 +2,16 @@
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://apiirina.duckdns.org";
 
+function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/-{2,}/g, '-');
+}
+
 // Required for static export with catch-all route
 export async function generateStaticParams() {
   try {
@@ -12,8 +22,8 @@ export async function generateStaticParams() {
     }
     const articles = await response.json();
     const params = articles
-      .filter((article: { slug: string; published?: boolean }) => article.published)
-      .map((article: { slug: string }) => ({ slug: [article.slug] }));
+      .filter((article: { title: string; published?: boolean }) => article.published)
+      .map((article: { title: string }) => ({ slug: [slugify(article.title)] }));
     
     console.log(`Generating ${params.length} article pages`);
     return params;

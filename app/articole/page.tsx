@@ -20,6 +20,16 @@ interface Article {
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://apiirina.duckdns.org";
 
+function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/-{2,}/g, '-');
+}
+
 export default function ArticolePage() {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
@@ -263,7 +273,7 @@ export default function ArticolePage() {
                               {article.excerpt}
                             </p>
                             <Link
-                              href={`/articole/${article.slug}`}
+                              href={`/articole/${slugify(article.title)}`}
                               className="inline-block font-sans text-sm text-gray-900 font-medium hover:underline"
                             >
                               Citește mai mult →
