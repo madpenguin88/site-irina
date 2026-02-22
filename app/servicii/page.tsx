@@ -127,159 +127,96 @@ export default function ServiciiPage() {
       <div className="pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="mb-16 text-center">
-            <h1 className="font-serif text-5xl md:text-6xl text-gray-900 mb-4">
+          <div className="mb-14 text-center">
+            <h1 className="font-serif text-4xl md:text-5xl text-gray-900 mb-3">
               Servicii
             </h1>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-16 bg-gray-300"></div>
-              <p className="font-script text-2xl text-gray-600">Terapie și Consiliere</p>
-              <div className="h-px w-16 bg-gray-300"></div>
+            <div className="flex items-center justify-center gap-3 mb-5">
+              <div className="h-px w-12 bg-gray-200"></div>
+              <p className="font-script text-xl text-gray-400">Terapie și Consiliere</p>
+              <div className="h-px w-12 bg-gray-200"></div>
             </div>
-            <p className="font-sans text-lg text-gray-700 max-w-3xl mx-auto">
+            <p className="font-sans text-base text-gray-500 max-w-2xl mx-auto">
               Ofer sprijin personalizat prin diverse tipuri de terapie și consiliere psihologică
             </p>
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {/* Service 1 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <h3 className="font-serif text-2xl text-gray-900 mb-4">
-                Evaluare Psihologică
-              </h3>
-              <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
-                Evaluare completă pentru identificarea nevoilor și stabilirea unui plan terapeutic personalizat. Procesul de evaluare include interviuri clinice, teste psihologice și o analiză detaliată a contextului personal și relațional.
-              </p>
-            </div>
-
-            {/* Service 2 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <h3 className="font-serif text-2xl text-gray-900 mb-4">
-                Psihoterapie Individuală
-              </h3>
-              <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
-                Sesiuni individuale pentru lucrul cu anxietate, depresie, traume și dezvoltare personală. Abordarea se centrează pe nevoile tale unice, ajutându-te să înțelegi tiparele de comportament și să găsești soluții practice pentru schimbare.
-              </p>
-            </div>
-
-            {/* Service 3 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <h3 className="font-serif text-2xl text-gray-900 mb-4">
-                Psihoterapie de Cuplu
-              </h3>
-              <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
-                Îmbunătățirea comunicării și rezolvarea conflictelor în relația de cuplu. Lucrez cu ambii parteneri pentru a construi o relație mai autentică, bazată pe înțelegere reciprocă și sprijin mutual.
-              </p>
-            </div>
-
-            {/* Service 4 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <h3 className="font-serif text-2xl text-gray-900 mb-4">
-                Psihoterapie de Familie
-              </h3>
-              <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
-                Sprijin pentru întreaga familie în depășirea dificultăților și îmbunătățirea relațiilor. Abordarea familiară ajută toți membrii să își înțeleagă rolurile și să colaboreze pentru un mediu familial mai sănătos.
-              </p>
-            </div>
-
-            {/* Service 5 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <h3 className="font-serif text-2xl text-gray-900 mb-4">
-                Consiliere Psihologică
-              </h3>
-              <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
-                Sprijin pe termen scurt pentru situații specifice și luarea deciziilor importante. Consiliera psihologică oferă claritate și perspective noi pentru provocările de moment.
-              </p>
-            </div>
-
-            {/* Service 6 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <h3 className="font-serif text-2xl text-gray-900 mb-4">
-                Dezvoltare Personală
-              </h3>
-              <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
-                Sesiuni pentru creșterea personală, îmbunătățirea stimei de sine și atingerea obiectivelor. Lucrez cu tine pentru a identifica și dezvolta resursele tale interioare.
-              </p>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
+            {[
+              'Evaluare Psihologică',
+              'Psihoterapie Individuală',
+              'Psihoterapie de Cuplu',
+              'Psihoterapie de Familie',
+              'Consiliere Psihologică',
+              'Dezvoltare Personală',
+            ].map((service) => (
+              <div
+                key={service}
+                className="px-6 py-5 bg-white border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-sm transition-all text-center"
+              >
+                <h3 className="font-serif text-base md:text-lg text-gray-800">
+                  {service}
+                </h3>
+              </div>
+            ))}
           </div>
 
           {/* Pricing Section */}
           <section className="mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-4 text-center">
               Tarife
             </h2>
-            <p className="font-sans text-lg text-gray-600 mb-6 text-center max-w-4xl mx-auto">
-              Preventia psihologica este cea mai inteleapta investitie pe care o poti face in tine. <br />Este mult mai usor sa rezolvi lucrurile cand abia incep sa te apese decat cand deja te coplesesc. <br />
+            <p className="font-sans text-base text-gray-500 mb-6 text-center max-w-3xl mx-auto leading-relaxed">
+              Prevenția psihologică este cea mai înțeleaptă investiție pe care o poți face în tine. Este mult mai ușor să rezolvi lucrurile când abia încep să te apese decât când deja te copleșesc.
             </p>
-             <p className="text-md text-gray-600 mb-12 text-center max-w-4xl mx-auto" style={{ fontFamily: 'var(--font-cinzel)' }}>
-              <b>Nu astepta sa fie urgent ca sa devina important.</b>
+            <p className="text-sm text-gray-500 mb-12 text-center max-w-3xl mx-auto" style={{ fontFamily: 'var(--font-cinzel)' }}>
+              <b>Nu aștepta să fie urgent ca să devină important.</b>
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {/* Pricing Card 1 */}
-              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center transform md:scale-105 shadow-xl">
-                <div className="mb-2">
-                  <div className="font-serif text-3xl text-white mb-1">150</div>
-                  <div className="font-sans text-xl text-gray-300">RON / ședință</div>
+            <div className="grid md:grid-cols-3 gap-5 max-w-3xl mx-auto">
+              {[
+                { price: '150', duration: '50 minute' },
+                { price: '200', duration: '75 minute' },
+                { price: '250', duration: '90 minute' },
+              ].map((tier) => (
+                <div
+                  key={tier.price}
+                  className="bg-white border border-gray-200 rounded-xl px-6 py-6 text-center hover:border-gray-300 hover:shadow-sm transition-all"
+                >
+                  <div className="font-serif text-2xl text-gray-800 mb-0.5">{tier.price}</div>
+                  <div className="font-sans text-sm text-gray-400 mb-3">RON / ședință</div>
+                  <div className="h-px bg-gray-100 my-3"></div>
+                  <div className="font-sans text-sm text-gray-500">
+                    {tier.duration}
+                  </div>
                 </div>
-                <div className="h-px bg-gray-700 my-3"></div>
-                <div className="font-sans text-sm font-semibold text-white">
-                  50 minute
-                </div>
-               
-              </div>
-
-              {/* Pricing Card 2 - Featured */}
-              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center transform md:scale-105 shadow-xl">
-                <div className="mb-2">
-                  <div className="font-serif text-3xl text-white mb-1">200</div>
-                  <div className="font-sans text-xl text-gray-300">RON / ședință</div>
-                </div>
-                <div className="h-px bg-gray-700 my-3"></div>
-                <div className="font-sans text-sm font-semibold text-white">
-                  75 minute
-                </div>
-          
-              </div>
-
-              {/* Pricing Card 3 */}
-              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center transform md:scale-105 shadow-xl">
-                <div className="mb-2">
-                  <div className="font-serif text-3xl text-white mb-1">250</div>
-                  <div className="font-sans text-xl text-gray-300">RON / ședință</div>
-                </div>
-                <div className="h-px bg-gray-700 my-3"></div>
-                <div className="font-sans text-sm font-semibold text-white">
-                  90 minute
-                </div>
-             
-              </div>
+              ))}
             </div>
 
-            <div className="mt-12 text-center">
-              <p className="font-sans text-base text-gray-600 italic max-w-2xl mx-auto">
+            <div className="mt-10 text-center">
+              <p className="font-sans text-sm text-gray-400 italic max-w-2xl mx-auto">
                 * Durata ședințelor o stabilim împreună la programare, în funcție de nevoile tale specifice.
               </p>
             </div>
           </section>
 
           {/* Photo Section with Image */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-5">
-              <h3 className="font-serif text-3xl text-gray-900">
+          <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
+            <div className="space-y-4">
+              <h3 className="font-serif text-2xl text-gray-800">
                 Cum funcționează?
               </h3>
-              <p className="font-sans text-lg text-gray-700 leading-relaxed">
+              <p className="font-sans text-base text-gray-500 leading-relaxed">
                 Prima ședință este dedicată evaluării și cunoașterii reciproce. Împreună stabilim obiectivele terapiei și frecvența ședințelor.
               </p>
-              <p className="font-sans text-lg text-gray-700 leading-relaxed">
+              <p className="font-sans text-base text-gray-500 leading-relaxed">
                 Ședințele pot avea loc față în față în cabinetul din Constanța sau online, în funcție de preferințele și nevoile tale.
               </p>
             </div>
             
             {/* Image on right - smaller on mobile */}
-            <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
+            <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-md">
               <Image
                 src="/pictures/functioneaza.jpg"
                 alt="Cabinet Terapie"
@@ -293,16 +230,16 @@ export default function ServiciiPage() {
           </div>
 
           {/* Call to action */}
-          <section className="bg-gray-800 rounded-2xl p-12 text-center">
-            <h2 className="font-serif text-3xl text-white mb-4">
+          <section className="border border-gray-200 rounded-2xl p-10 md:p-12 text-center">
+            <h2 className="font-serif text-2xl md:text-3xl text-gray-800 mb-3">
               Programează o ședință
             </h2>
-            <p className="font-sans text-lg text-gray-300 mb-8">
+            <p className="font-sans text-base text-gray-500 mb-6 max-w-lg mx-auto">
               Dacă ai întrebări despre servicii sau tarife, nu ezita să mă contactezi.
             </p>
             <Link 
               href="/#contact"
-              className="inline-block px-8 py-4 bg-white text-gray-900 font-sans text-sm rounded-full hover:bg-gray-100 transition-colors"
+              className="inline-block px-7 py-3 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-700 transition-colors"
             >
               Contactează-mă
             </Link>
