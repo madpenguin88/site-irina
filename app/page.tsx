@@ -170,66 +170,25 @@ export default function Home() {
             Oferă sprijin personalizat prin diverse tipuri de terapie și consiliere
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Service Card 1 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
-              <h3 className="font-serif text-2xl text-gray-900 mb-3">
-                Evaluare Psihologică
-              </h3>
-              <p className="font-sans text-gray-600">
-                Evaluare completă pentru identificarea nevoilor și stabilirea unui plan terapeutic personalizat.
-              </p>
-            </Link>
-
-            {/* Service Card 2 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
-              <h3 className="font-serif text-2xl text-gray-900 mb-3">
-                Psihoterapie Individuală
-              </h3>
-              <p className="font-sans text-gray-600">
-                Sesiuni individuale pentru anxietate, depresie, traume și dezvoltare personală.
-              </p>
-            </Link>
-
-            {/* Service Card 3 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
-              <h3 className="font-serif text-2xl text-gray-900 mb-3">
-                Psihoterapie de Cuplu
-              </h3>
-              <p className="font-sans text-gray-600">
-                Îmbunătățirea comunicării și rezolvarea conflictelor în relația de cuplu.
-              </p>
-            </Link>
-
-            {/* Service Card 4 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
-              <h3 className="font-serif text-2xl text-gray-900 mb-3">
-                Psihoterapie de Familie
-              </h3>
-              <p className="font-sans text-gray-600">
-                Sprijin pentru întreaga familie în depășirea dificultăților și îmbunătățirea relațiilor.
-              </p>
-            </Link>
-
-            {/* Service Card 5 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
-              <h3 className="font-serif text-2xl text-gray-900 mb-3">
-                Consiliere Psihologică
-              </h3>
-              <p className="font-sans text-gray-600">
-                Sprijin pe termen scurt pentru situații specifice și luarea deciziilor importante.
-              </p>
-            </Link>
-
-            {/* Service Card 6 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
-              <h3 className="font-serif text-2xl text-gray-900 mb-3">
-                Dezvoltare Personală
-              </h3>
-              <p className="font-sans text-gray-600">
-                Sesiuni pentru creșterea personală, îmbunătățirea stimei de sine și atingerea obiectivelor.
-              </p>
-            </Link>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              'Evaluare Psihologică',
+              'Psihoterapie Individuală',
+              'Psihoterapie de Cuplu',
+              'Psihoterapie de Familie',
+              'Consiliere Psihologică',
+              'Dezvoltare Personală',
+            ].map((service) => (
+              <Link
+                key={service}
+                href="/servicii"
+                className="px-6 py-5 bg-white border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-sm transition-all text-center"
+              >
+                <h3 className="font-serif text-base md:text-lg text-gray-800">
+                  {service}
+                </h3>
+              </Link>
+            ))}
           </div>
 
           {/* Call to Action - Learn More */}
