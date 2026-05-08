@@ -20,6 +20,16 @@ interface Article {
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://apiirina.duckdns.org";
 
+function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/-{2,}/g, '-');
+}
+
 export default function ArticleContent({ slug }: { slug: string }) {
   const [article, setArticle] = useState<Article | null>(null);
   const [loading, setLoading] = useState(true);
@@ -34,7 +44,7 @@ export default function ArticleContent({ slug }: { slug: string }) {
           throw new Error("Failed to fetch articles");
         }
         const articles = await response.json();
-        const foundArticle = articles.find((a: Article) => a.slug === slug && a.published);
+        const foundArticle = articles.find((a: Article) => (slugify(a.title) === slug || a.slug === slug) && a.published);
         
         if (!foundArticle) {
           throw new Error("Article not found");
