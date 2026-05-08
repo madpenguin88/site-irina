@@ -34,14 +34,11 @@ export default function ServiciiPage() {
             <Link href="/articole" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               ARTICOLE
             </Link>
-            <Link href="/intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              ÎNTREBĂRI
-            </Link>
             <Link href="/servicii" className="font-sans text-sm text-gray-900 font-semibold transition-colors">
               SERVICII
             </Link>
-            <Link href="/#colaborari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              COLABORĂRI
+            <Link href="/#intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+              ÎNTREBĂRI
             </Link>
             <Link href="/#contact" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               CONTACT
@@ -89,13 +86,6 @@ export default function ServiciiPage() {
               ARTICOLE
             </Link>
             <Link 
-              href="/intrebari"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
-            >
-              ÎNTREBĂRI
-            </Link>
-            <Link 
               href="/servicii"
               onClick={() => setMobileMenuOpen(false)}
               className="block font-sans text-sm text-gray-900 font-semibold transition-colors py-2"
@@ -103,11 +93,11 @@ export default function ServiciiPage() {
               SERVICII
             </Link>
             <Link 
-              href="/#colaborari"
+              href="/#intrebari"
               onClick={() => setMobileMenuOpen(false)}
               className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
             >
-              COLABORĂRI
+              ÎNTREBĂRI
             </Link>
             <Link 
               href="/#contact"
@@ -137,7 +127,7 @@ export default function ServiciiPage() {
               <div className="h-px w-16 bg-gray-300"></div>
             </div>
             <p className="font-sans text-lg text-gray-700 max-w-3xl mx-auto">
-              Ofer sprijin personalizat prin diverse tipuri de terapie și consiliere psihologică
+              Oriunde ai fi pe drumul tău, există un loc de unde poți începe - și nu trebuie să mergi singur.
             </p>
           </div>
 
@@ -183,6 +173,26 @@ export default function ServiciiPage() {
               </p>
             </div>
 
+            {/* Service: Psihoterapie de Grup */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <h3 className="font-serif text-2xl text-gray-900 mb-4">
+                Psihoterapie de Grup
+              </h3>
+              <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
+                Sesiuni de terapie bazate pe dinamica de grup, oferind un mediu sigur și empatic pentru a explora împreună cu ceilalți provocările emoționale și relaționale.
+              </p>
+            </div>
+
+            {/* Service: Grupuri de Suport */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <h3 className="font-serif text-2xl text-gray-900 mb-4">
+                Grupuri de Suport
+              </h3>
+              <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
+                Întâlniri periodice pentru persoanele care trec prin experiențe similare, creând un spațiu de ascultare activă, împărtășire și suport reciproc.
+              </p>
+            </div>
+
             {/* Service 5 */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
               <h3 className="font-serif text-2xl text-gray-900 mb-4">
@@ -210,50 +220,59 @@ export default function ServiciiPage() {
               Tarife
             </h2>
             <p className="font-sans text-lg text-gray-600 mb-6 text-center max-w-4xl mx-auto">
-              Preventia psihologica este cea mai inteleapta investitie pe care o poti face in tine. <br />Este mult mai usor sa rezolvi lucrurile cand abia incep sa te apese decat cand deja te coplesesc. <br />
+              Prevenția psihologică este cea mai înțeleaptă investiție pe care o poți face în tine. <br />Este mult mai ușor să rezolvi lucrurile când abia încep să te apese decât când deja te copleșesc. <br />
             </p>
              <p className="text-md text-gray-600 mb-12 text-center max-w-4xl mx-auto" style={{ fontFamily: 'var(--font-cinzel)' }}>
-              <b>Nu astepta sa fie urgent ca sa devina important.</b>
+              <b>Nu aștepta să fie urgent ca să devină important.</b>
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {/* Pricing Card 1 */}
-              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center transform md:scale-105 shadow-xl">
-                <div className="mb-2">
-                  <div className="font-serif text-3xl text-white mb-1">150</div>
-                  <div className="font-sans text-xl text-gray-300">RON / ședință</div>
-                </div>
-                <div className="h-px bg-gray-700 my-3"></div>
-                <div className="font-sans text-sm font-semibold text-white">
-                  50 minute
-                </div>
-               
-              </div>
-
-              {/* Pricing Card 2 - Featured */}
-              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center transform md:scale-105 shadow-xl">
+              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center shadow-xl">
                 <div className="mb-2">
                   <div className="font-serif text-3xl text-white mb-1">200</div>
                   <div className="font-sans text-xl text-gray-300">RON / ședință</div>
                 </div>
                 <div className="h-px bg-gray-700 my-3"></div>
                 <div className="font-sans text-sm font-semibold text-white">
-                  75 minute
+                  50 minute
                 </div>
-          
               </div>
 
-              {/* Pricing Card 3 */}
-              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center transform md:scale-105 shadow-xl">
+              {/* Pricing Card 2 */}
+              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center shadow-xl">
                 <div className="mb-2">
                   <div className="font-serif text-3xl text-white mb-1">250</div>
                   <div className="font-sans text-xl text-gray-300">RON / ședință</div>
                 </div>
                 <div className="h-px bg-gray-700 my-3"></div>
                 <div className="font-sans text-sm font-semibold text-white">
+                  75 minute
+                </div>
+              </div>
+
+              {/* Pricing Card 3 */}
+              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center shadow-xl">
+                <div className="mb-2">
+                  <div className="font-serif text-3xl text-white mb-1">300</div>
+                  <div className="font-sans text-xl text-gray-300">RON / ședință</div>
+                </div>
+                <div className="h-px bg-gray-700 my-3"></div>
+                <div className="font-sans text-sm font-semibold text-white">
                   90 minute
                 </div>
-             
+              </div>
+
+               {/* Pricing Card 4 */}
+              <div className="bg-gray-800 rounded-xl p-5 border-2 border-gray-400 text-center shadow-xl">
+                <div className="mb-2">
+                  <div className="font-serif text-3xl text-white mb-1">150</div>
+                  <div className="font-sans text-sm text-gray-300">RON / întâlnire grupuri suport</div>
+                </div>
+                <div className="h-px bg-gray-700 my-3"></div>
+                <div className="font-sans text-sm font-semibold text-white">
+                  120 minute
+                </div>
               </div>
             </div>
 

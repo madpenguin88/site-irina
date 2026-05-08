@@ -87,15 +87,13 @@ export default function ArticleContent({ slug }: { slug: string }) {
             <Link href="/articole" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               ARTICOLE
             </Link>
-            <Link href="/intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              ÎNTREBĂRI
-            </Link>
+
             <Link href="/#servicii" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               SERVICII
-            </Link>
-            <Link href="/#colaborari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              COLABORĂRI
-            </Link>
+            </Link>            
+            <Link href="/#intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+              ÎNTREBĂRI
+            </Link>          
             <Link href="/#contact" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               CONTACT
             </Link>

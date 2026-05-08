@@ -95,14 +95,11 @@ export default function ArticolePage() {
             <Link href="/articole" className="font-sans text-sm text-gray-900 font-semibold transition-colors">
               ARTICOLE
             </Link>
-            <Link href="/intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              ÎNTREBĂRI
-            </Link>
             <Link href="/servicii" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               SERVICII
             </Link>
-            <Link href="/#colaborari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              COLABORĂRI
+            <Link href="/#intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+              ÎNTREBĂRI
             </Link>
             <Link href="/#contact" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               CONTACT
@@ -150,13 +147,6 @@ export default function ArticolePage() {
               ARTICOLE
             </Link>
             <Link 
-              href="/intrebari"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
-            >
-              ÎNTREBĂRI
-            </Link>
-            <Link 
               href="/servicii"
               onClick={() => setMobileMenuOpen(false)}
               className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
@@ -164,11 +154,11 @@ export default function ArticolePage() {
               SERVICII
             </Link>
             <Link 
-              href="/#colaborari"
+              href="/#intrebari"
               onClick={() => setMobileMenuOpen(false)}
               className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
             >
-              COLABORĂRI
+              ÎNTREBĂRI
             </Link>
             <Link 
               href="/#contact"

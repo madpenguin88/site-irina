@@ -34,14 +34,11 @@ export default function DesprePage() {
             <Link href="/articole" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               ARTICOLE
             </Link>
-            <Link href="/intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              ÎNTREBĂRI
-            </Link>
             <Link href="/#servicii" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               SERVICII
             </Link>
-            <Link href="/#colaborari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              COLABORĂRI
+            <Link href="/#intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+              ÎNTREBĂRI
             </Link>
             <Link href="/#contact" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               CONTACT
@@ -89,13 +86,6 @@ export default function DesprePage() {
               ARTICOLE
             </Link>
             <Link 
-              href="/intrebari"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
-            >
-              ÎNTREBĂRI
-            </Link>
-            <Link 
               href="/#servicii"
               onClick={() => setMobileMenuOpen(false)}
               className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
@@ -103,11 +93,11 @@ export default function DesprePage() {
               SERVICII
             </Link>
             <Link 
-              href="/#colaborari"
+              href="/#intrebari"
               onClick={() => setMobileMenuOpen(false)}
               className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
             >
-              COLABORĂRI
+              ÎNTREBĂRI
             </Link>
             <Link 
               href="/#contact"
@@ -196,7 +186,7 @@ export default function DesprePage() {
               {/* Image on right - smaller on mobile */}
               <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
                 <Image
-                  src="/pictures/parinti.jpg"
+                  src="/pictures/adolescent.jpg"
                   alt="Therapy Room Detail"
                   fill
                   className="object-cover"
@@ -317,6 +307,78 @@ export default function DesprePage() {
               <p className="font-sans text-lg text-gray-700 leading-relaxed italic">
                Particip constant la training-uri, workshop-uri și seminarii din abordarea adleriană, atât la nivel național, cât și internațional, alături de specialiști cu experiență vastă în domeniul psihoterapiei. Învățarea nu se oprește niciodată - mă voi perfecționa pe tot parcursul carierei pentru a-ți putea oferi cel mai bun suport posibil.
               </p>
+            </div>
+          </section>
+
+          {/* Colaborări Section */}
+          <section id="colaborari" className="mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
+              Colaborări
+            </h2>
+            <p className="font-sans text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+              Proiecte dedicate dezvoltării personale și emoționale
+            </p>
+            
+            <div className="relative overflow-hidden border border-gray-200 rounded-2xl p-8 md:p-12 shadow-sm">
+              {/* Background Image with Glass Effect */}
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/pictures/home-hero-featured-2.png"
+                  alt="Background"
+                  fill
+                  className="object-cover opacity-100"
+                  quality={75}
+                />
+                <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <Image
+                    src="/pictures/svgexport-1.svg"
+                    alt="Ryota Logo"
+                    width={60}
+                    height={60}
+                    className="flex-shrink-0"
+                  />
+                  <Image
+                    src="/pictures/svgexport-3.svg"
+                    alt="Ryota name Logo"
+                    width={80}
+                    height={60}
+                    className="flex-shrink-0 translate-y-2"
+                   
+                  />
+                </div>
+              
+                <p className="font-script text-2xl text-amber-900 mb-6">
+                  Program de Dezvoltare Socială și Emoțională
+                </p>
+                
+                <div className="space-y-5 font-sans text-lg text-gray-700 leading-relaxed mb-8">
+                  <p>
+                    Ryota este un proiect dedicat susținerii persoanelor care urmăresc acel sentiment unic de a avea impact pozitiv în societate.
+        <br /> <br />
+                    Pentru că binele tău uneori cere mai mult decât un singur om - lucrăm cu o echipă multidisciplinară de specialiști și derulăm proiecte gândite special pentru îmbunătățirea calității vieții tale.
+                  
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <a 
+                    href="https://ryota.ro" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
+                  >
+                    <span>Descoperă mai multe despre Ryota</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
 

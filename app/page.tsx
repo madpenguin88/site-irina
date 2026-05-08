@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import BackToTop from "./components/BackToTop";
+import FAQSection from "./components/FAQSection"; // Import component
 import { useState } from "react";
 
 export default function Home() {
@@ -34,15 +35,12 @@ export default function Home() {
             <Link href="/articole" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               ARTICOLE
             </Link>
-            <Link href="/intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              ÎNTREBĂRI
-            </Link>
             <Link href="/servicii" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               SERVICII
             </Link>
-            <a href="#colaborari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              COLABORĂRI
-            </a>
+            <Link href="/#intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
+              ÎNTREBĂRI
+            </Link>
             <a href="#contact" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
               CONTACT
             </a>
@@ -89,26 +87,19 @@ export default function Home() {
               ARTICOLE
             </Link>
             <Link 
-              href="/intrebari"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
-            >
-              ÎNTREBĂRI
-            </Link>
-            <Link 
               href="/servicii"
               onClick={() => setMobileMenuOpen(false)}
               className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
             >
               SERVICII
             </Link>
-            <a 
-              href="#colaborari"
+            <Link 
+              href="/#intrebari"
               onClick={() => setMobileMenuOpen(false)}
               className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
             >
-              COLABORĂRI
-            </a>
+              ÎNTREBĂRI
+            </Link>
             <a 
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
@@ -131,10 +122,10 @@ export default function Home() {
             <div className="space-y-6">
               <h2 className="font-serif text-5xl md:text-6xl text-gray-900 leading-tight">
                 Bine ai venit în
-                <span className="block text-gray-600 mt-2">spațiul tău de vindecare</span>
+                <span className="block text-gray-600 mt-2">spațiul tău de transformare</span>
               </h2>
               <p className="font-sans text-lg text-gray-600 leading-relaxed">
-                Sunt psiholog și psihoterapeut cu orientare adleriană, dedicată să te sprijin în procesul tău de dezvoltare personală și echilibrare emoțională.
+                Indiferent de motivul pentru care ai ajuns aici, ceva din tine vrea să evolueze. Drumul spre o viață mai împlinită începe cu o singură decizie. Hai să descoperim împreună ce e posibil.
               </p>
               <a 
                 href="#contact"
@@ -147,7 +138,7 @@ export default function Home() {
             {/* Right - Image */}
             <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gray-100">
               <Image
-                src="/pictures/hands.jpg"
+                src="/pictures/mainhands.jpg"
                 alt="Irina Gospodaru - Psihoterapeut"
                 fill
                 className="object-cover"
@@ -167,10 +158,10 @@ export default function Home() {
             Servicii
           </h2>
           <p className="font-sans text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-            Oferă sprijin personalizat prin diverse tipuri de terapie și consiliere
+            Oriunde ai fi pe drumul tău, există un loc de unde poți începe - și nu trebuie să mergi singur.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Service Card 1 */}
             <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
               <h3 className="font-serif text-2xl text-gray-900 mb-3">
@@ -211,6 +202,26 @@ export default function Home() {
               </p>
             </Link>
 
+            {/* Service Card: Psihoterapie de Grup */}
+            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
+              <h3 className="font-serif text-2xl text-gray-900 mb-3">
+                Psihoterapie de Grup
+              </h3>
+              <p className="font-sans text-gray-600">
+                Sesiuni de terapie bazate pe dinamica de grup, mediu sigur și empatic.
+              </p>
+            </Link>
+
+            {/* Service Card: Grupuri de Suport */}
+            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
+              <h3 className="font-serif text-2xl text-gray-900 mb-3">
+                Grupuri de Suport
+              </h3>
+              <p className="font-sans text-gray-600">
+                Întâlniri periodice pentru un spațiu de ascultare activă și suport reciproc.
+              </p>
+            </Link>
+
             {/* Service Card 5 */}
             <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all cursor-pointer">
               <h3 className="font-serif text-2xl text-gray-900 mb-3">
@@ -244,88 +255,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Colaborări Section */}
-      <section id="colaborari" className="py-12 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
-            Colaborări
-          </h2>
-          <p className="font-sans text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-            Proiecte dedicate dezvoltării personale și emoționale
-          </p>
-          
-          <div className="relative overflow-hidden border border-gray-200 rounded-2xl p-8 md:p-12 shadow-sm">
-            {/* Background Image with Glass Effect */}
-            <div className="absolute inset-0 z-0">
-              <Image
-                src="/pictures/home-hero-featured-2.png"
-                alt="Background"
-                fill
-                className="object-cover opacity-100"
-                quality={75}
-              />
-              <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
-            </div>
-            
-            {/* Content */}
-            <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-6">
-                <Image
-                  src="/pictures/svgexport-1.svg"
-                  alt="Ryota Logo"
-                  width={60}
-                  height={60}
-                  className="flex-shrink-0"
-                />
-                <Image
-                  src="/pictures/svgexport-3.svg"
-                  alt="Ryota name Logo"
-                  width={80}
-                  height={70}
-                  className="flex-shrink-0"
-                  style={{ height: 'auto' }}
-                />
-               
-              </div>
-            
-            <p className="font-script text-2xl text-amber-900 mb-6">
-              Program de Dezvoltare Socială și Emoțională
-            </p>
-            
-            <div className="space-y-5 font-sans text-lg text-gray-700 leading-relaxed mb-8">
-              <p>
-                Ryota este un proiect dedicat susținerii persoanelor care urmăresc acel sentiment unic de a avea impact pozitiv în societate.
-              </p>
-              
-              
-                
-                <p>
-                  Scopul programului vizeaza antrenarea abilităților de recunoaștere și gestionare a propriilor emoții (pozitive și negative).
-                </p>
-              
-              
-              <p>
-                Programul include workshop-uri de prevenție și workshop-uri de intervenție (pentru adolescenți și adulți), precum și activități de dezvoltare personală pentru copii.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <a 
-                href="https://ryota.ro" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
-              >
-                <span>Descoperă mai multe despre Ryota</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-gray-50">
@@ -334,7 +265,8 @@ export default function Home() {
             Contact
           </h2>
           <p className="font-sans text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-            Oricare ar fi provocarea cu care te confrunți sau obiectivul pe care ți-l dorești, sunt aici pentru tine. Împreună putem explora ce schimbări sunt posibile și care pași au sens pentru tine.
+            Nu trebuie să știi exact ce cauți. Trebuie doar să simți că ceva poate fi și altfel. <br />
+            Dacă ești aici, probabil că acel moment a venit. 
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -360,7 +292,7 @@ export default function Home() {
 
             {/* WhatsApp Card */}
             <a 
-              href="https://wa.me/40XXXXXXXXX" 
+              href="https://wa.me/40726326763" 
               target="_blank"
               rel="noopener noreferrer"
               className="group p-6 bg-gray-800 hover:bg-gray-700 rounded-xl transition-all shadow-sm"
@@ -373,7 +305,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg text-white mb-1">WhatsApp</h3>
-                  <p className="font-sans text-sm text-gray-300">+40 XXX XXX XXX</p>
+                  <p className="font-sans text-sm text-gray-300">+40 726 326 763</p>
                 </div>
               </div>
             </a>
@@ -400,7 +332,7 @@ export default function Home() {
 
             {/* Instagram Card */}
             <a 
-              href="https://instagram.com/irinagospodaru" 
+              href="https://instagram.com/psiholog.irinagospodaru" 
               target="_blank"
               rel="noopener noreferrer"
               className="group p-6 bg-gray-800 hover:bg-gray-700 rounded-xl transition-all shadow-sm"
@@ -413,7 +345,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg text-white mb-1">Instagram</h3>
-                  <p className="font-sans text-sm text-gray-300">@irinagospodaru</p>
+                  <p className="font-sans text-sm text-gray-300">@psiholog.irinagospodaru</p>
                 </div>
               </div>
             </a>
