@@ -275,24 +275,49 @@ export default function DesprePage() {
                 </div>
               </a>
 
-              <div className="relative overflow-hidden border border-gray-200 rounded-2xl p-8 md:p-12 shadow-sm min-h-[180px] flex items-center justify-center">
+              <a
+                href="https://psihoterapeutpopesculaura.ro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block overflow-hidden border border-gray-200 rounded-2xl p-8 md:p-12 shadow-sm hover:shadow-md hover:border-gray-300 transition-all cursor-pointer"
+              >
                 <div className="absolute inset-0 z-0">
                   <Image
                     src="/pictures/laurapopescu.png"
-                    alt="Laura Popescu"
+                    alt="Laura Popescu background"
                     fill
-                    className="object-cover"
+                    className="object-cover opacity-100"
                     quality={75}
                   />
-                  <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
+                  <div className="absolute inset-0 bg-white/60 backdrop-blur-sm group-hover:bg-white/50 transition-colors"></div>
                 </div>
 
+                <svg
+                  className="absolute top-4 right-4 z-20 w-4 h-4 text-gray-500 group-hover:text-gray-900 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+
                 <div className="relative z-10 flex flex-col items-center text-center">
-                  <p className="font-serif text-2xl md:text-3xl text-gray-900 mb-2">
-                    Psihoterapeut Laura Popescu
+                  <div className="flex items-center justify-center mb-6">
+                    <Image
+                      src="/pictures/psihoterapeutpopesculaura-logo.webp"
+                      alt="Laura Popescu logo"
+                      width={220}
+                      height={120}
+                      className="h-auto w-auto max-w-[220px] object-contain"
+                    />
+                  </div>
+
+                  <p className="font-script text-2xl md:text-3xl text-amber-900 leading-tight">
+                    Psihoterapeut & Psihosexolog
                   </p>
                 </div>
-              </div>
+              </a>
             </div>
             
           </section>

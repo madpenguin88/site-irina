@@ -76,19 +76,23 @@ export default function ServiciiPage() {
                     {category.label}
                   </p>
                   <ul className="divide-y divide-gray-200/80">
-                    {category.items.map((item) => (
-                      <li
-                        key={item.name}
-                        className="py-4 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6"
-                      >
-                        <span className="font-serif text-lg md:text-xl text-gray-900">
-                          {item.name}
-                        </span>
-                        <span className="font-sans text-base text-gray-600 shrink-0">
-                          {item.price} RON — ședință / {item.duration}
-                        </span>
-                      </li>
-                    ))}
+                    {category.items.map((item) => {
+                      const isGroupCategory = category.label === "Grupuri";
+
+                      return (
+                        <li
+                          key={item.name}
+                          className="py-4 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6"
+                        >
+                          <span className="font-serif text-lg md:text-xl text-gray-900">
+                            {item.name}
+                          </span>
+                          <span className="font-sans text-base text-gray-600 shrink-0">
+                            {item.price} RON — {isGroupCategory ? "sesiune" : "ședință"} / {item.duration}
+                          </span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               ))}
