@@ -2,113 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import BackToTop from "../components/BackToTop";
+import Navbar from "../components/Navbar";
 
 export default function DesprePage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-white">
-      {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          {/* Logo / Brand */}
-          <Link href="/" className="flex flex-col">
-            <h1 className="text-md font-semibold text-gray-900" style={{ fontFamily: 'var(--font-cinzel)' }}>
-              Irina Gospodaru
-            </h1>
-            <p className="font-script text-lg text-gray-600">
-              Psihoterapeut Adlerian
-            </p>
-          </Link>
-
-          {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              ACASĂ
-            </Link>
-            <Link href="/despre" className="font-sans text-sm text-gray-900 font-semibold transition-colors">
-              DESPRE MINE
-            </Link>
-            <Link href="/articole" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              ARTICOLE
-            </Link>
-            <Link href="/#servicii" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              SERVICII
-            </Link>
-            <Link href="/#intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              ÎNTREBĂRI
-            </Link>
-            <Link href="/#contact" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              CONTACT
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
-            aria-label="Toggle menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="px-6 py-4 space-y-4 bg-white/95 backdrop-blur-sm border-t border-gray-200">
-            <Link 
-              href="/"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
-            >
-              ACASĂ
-            </Link>
-            <Link 
-              href="/despre"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-900 font-semibold transition-colors py-2"
-            >
-              DESPRE MINE
-            </Link>
-            <Link 
-              href="/articole"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
-            >
-              ARTICOLE
-            </Link>
-            <Link 
-              href="/#servicii"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
-            >
-              SERVICII
-            </Link>
-            <Link 
-              href="/#intrebari"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
-            >
-              ÎNTREBĂRI
-            </Link>
-            <Link 
-              href="/#contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors py-2"
-            >
-              CONTACT
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar activePage="despre" />
 
       {/* Back to Top Button */}
       <BackToTop />
@@ -124,7 +24,7 @@ export default function DesprePage() {
                 {/* Main profile image - centered */}
                 <div className="relative w-[220px] md:w-[340px] h-[240px] md:h-[440px] overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border-4 md:border-8 border-white">
                   <Image
-                    src="/pictures/irina.jpg"
+                    src="/pictures/irina.jpeg"
                     alt="Irina Gospodaru - Psihoterapeut Adlerian"
                     fill
                     className="object-cover"
@@ -169,33 +69,34 @@ export default function DesprePage() {
               Cred că schimbarea reală nu se întâmplă doar în cabinet, ci atunci când se extinde în viața de zi cu zi.
             </p>
 
-            {/* Section 1: Text Left, Image Right */}
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
+ {/* Section 1: Text Left, Image Right */}
+ <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
               <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm">
                 <h3 className="font-serif text-3xl text-gray-900">
-                  Cu adolescenții și familiile lor
+                  În terapia individuală
                 </h3>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Lucrez pentru ca ceea ce adolescentul descoperă despre sine în terapie să fie susținut și acasă. Implicarea familiei face ca progresul să fie mai solid și mai durabil - toți învață cum să sprijine schimbarea.
+                  Deși lucrăm împreună individual, țin cont de contextul tău relațional - familie, prieteni, colegi, istoricul tău personal, resursele și oportunitățile de mediu, dar și de scopurile și direcția pe care ți-o dorești în viață.
                 </p>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Ceea ce se întâmplă în cabinet devine parte din viața de zi cu zi a întregii familii, creând un mediu în care schimbarea este nu doar posibilă, ci și susținută.
+                  Ceea ce descoperi și schimbi în cabinet se reflectă apoi în toate relațiile tale importante, creând un efect de undă care transformă experiența ta în lume.
                 </p>
               </div>
               
               {/* Image on right - smaller on mobile */}
               <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
                 <Image
-                  src="/pictures/adolescent.jpg"
-                  alt="Therapy Room Detail"
+                  src="/pictures/individual.jpg"
+                  alt="Therapy Setting"
                   fill
                   className="object-cover"
-                  loading="lazy"
+                  loading="eager"
                   quality={80}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
+
 
             {/* Section 2: Image Left, Text Right */}
             <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
@@ -225,28 +126,29 @@ export default function DesprePage() {
               </div>
             </div>
 
+           
             {/* Section 3: Text Left, Image Right */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
               <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm">
                 <h3 className="font-serif text-3xl text-gray-900">
-                  În terapia individuală
+                  Cu adolescenții și familiile lor
                 </h3>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Deși lucrăm împreună individual, țin cont de contextul tău relațional - familie, prieteni, colegi, istoricul tău personal, resursele și oportunitățile de mediu, dar și de scopurile și direcția pe care ți-o dorești în viață.
+                  Lucrez pentru ca ceea ce adolescentul descoperă despre sine în terapie să fie susținut și acasă. Implicarea familiei face ca progresul să fie mai solid și mai durabil - toți învață cum să sprijine schimbarea.
                 </p>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Ceea ce descoperi și schimbi în cabinet se reflectă apoi în toate relațiile tale importante, creând un efect de undă care transformă experiența ta în lume.
+                  Ceea ce se întâmplă în cabinet devine parte din viața de zi cu zi a întregii familii, creând un mediu în care schimbarea este nu doar posibilă, ci și susținută.
                 </p>
               </div>
               
               {/* Image on right - smaller on mobile */}
               <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
                 <Image
-                  src="/pictures/individual.jpg"
-                  alt="Therapy Setting"
+                  src="/pictures/adolescent.jpg"
+                  alt="Therapy Room Detail"
                   fill
                   className="object-cover"
-                  loading="eager"
+                  loading="lazy"
                   quality={80}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
@@ -296,8 +198,8 @@ export default function DesprePage() {
                 </h3>
                 <ul className="space-y-4 font-sans text-lg text-gray-700 list-disc list-inside">
                   <li>Formare în Psihoterapie Adleriană (2 ani) - Institutul Alfred Adler</li>
-                  <li>Supervizare în Psihoterapie Adleriană (2 ani, în curs) - Institutul Alfred Adler</li>
-                  <li>Supervizare în Psihologie Clinică (2 ani, în curs)</li>
+                  <li>Supervizare în Psihoterapie Adleriană - Institutul Alfred Adler</li>
+                  <li>Supervizare în Psihologie Clinică</li>
                 </ul>
               </div>
             </div>
@@ -305,91 +207,104 @@ export default function DesprePage() {
             {/* Final note */}
             <div className="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 md:p-10 border-l-4 border-gray-900">
               <p className="font-sans text-lg text-gray-700 leading-relaxed italic">
-               Particip constant la training-uri, workshop-uri și seminarii din abordarea adleriană, atât la nivel național, cât și internațional, alături de specialiști cu experiență vastă în domeniul psihoterapiei. Învățarea nu se oprește niciodată - mă voi perfecționa pe tot parcursul carierei pentru a-ți putea oferi cel mai bun suport posibil.
+              Particip constant la training-uri, workshop-uri și seminarii din abordarea adleriană, atât la nivel național, cât și internațional, alături de specialiști cu experiență vastă în domeniul psihoterapiei. Învățarea nu se oprește niciodată - mă perfecționez continuu pentru a-ți putea oferi cel mai bun suport posibil.
               </p>
             </div>
           </section>
 
           {/* Colaborări Section */}
-          <section id="colaborari" className="mb-16">
+          <section id="recomandari" className="mb-16">
             <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
-              Colaborări
+              Recomandări
             </h2>
             <p className="font-sans text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-              Proiecte dedicate dezvoltării personale și emoționale
+              
             </p>
             
-            <div className="relative overflow-hidden border border-gray-200 rounded-2xl p-8 md:p-12 shadow-sm">
-              {/* Background Image with Glass Effect */}
-              <div className="absolute inset-0 z-0">
-                <Image
-                  src="/pictures/home-hero-featured-2.png"
-                  alt="Background"
-                  fill
-                  className="object-cover opacity-100"
-                  quality={75}
-                />
-                <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
-              </div>
-              
-              {/* Content */}
-              <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-6">
+            <div className="space-y-6">
+              <a
+                href="https://ryota.ro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block overflow-hidden border border-gray-200 rounded-2xl p-8 md:p-12 shadow-sm hover:shadow-md hover:border-gray-300 transition-all cursor-pointer"
+              >
+                {/* Background Image with Glass Effect */}
+                <div className="absolute inset-0 z-0">
                   <Image
-                    src="/pictures/svgexport-1.svg"
-                    alt="Ryota Logo"
-                    width={60}
-                    height={60}
-                    className="flex-shrink-0"
+                    src="/pictures/home-hero-featured-2.png"
+                    alt="Background"
+                    fill
+                    className="object-cover opacity-100"
+                    quality={75}
                   />
-                  <Image
-                    src="/pictures/svgexport-3.svg"
-                    alt="Ryota name Logo"
-                    width={80}
-                    height={60}
-                    className="flex-shrink-0 translate-y-2"
-                   
-                  />
+                  <div className="absolute inset-0 bg-white/60 backdrop-blur-sm group-hover:bg-white/50 transition-colors"></div>
                 </div>
-              
-                <p className="font-script text-2xl text-amber-900 mb-6">
-                  Program de Dezvoltare Socială și Emoțională
-                </p>
+
+                <svg
+                  className="absolute top-4 right-4 z-20 w-4 h-4 text-gray-500 group-hover:text-gray-900 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
                 
-                <div className="space-y-5 font-sans text-lg text-gray-700 leading-relaxed mb-8">
-                  <p>
-                    Ryota este un proiect dedicat susținerii persoanelor care urmăresc acel sentiment unic de a avea impact pozitiv în societate.
-        <br /> <br />
-                    Pentru că binele tău uneori cere mai mult decât un singur om - lucrăm cu o echipă multidisciplinară de specialiști și derulăm proiecte gândite special pentru îmbunătățirea calității vieții tale.
-                  
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  <div className="flex items-center justify-center gap-4 mb-6">
+                    <Image
+                      src="/pictures/svgexport-1.svg"
+                      alt="Ryota Logo"
+                      width={60}
+                      height={60}
+                      className="flex-shrink-0"
+                    />
+                    <Image
+                      src="/pictures/svgexport-3.svg"
+                      alt="Ryota name Logo"
+                      width={80}
+                      height={60}
+                      className="flex-shrink-0 translate-y-2"
+                    />
+                  </div>
+                
+                  <p className="font-script text-2xl text-amber-900">
+                    Program de Dezvoltare Socială și Emoțională
                   </p>
                 </div>
-                
-                <div className="text-center">
-                  <a 
-                    href="https://ryota.ro" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
-                  >
-                    <span>Descoperă mai multe despre Ryota</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+              </a>
+
+              <div className="relative overflow-hidden border border-gray-200 rounded-2xl p-8 md:p-12 shadow-sm min-h-[180px] flex items-center justify-center">
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/pictures/laurapopescu.png"
+                    alt="Laura Popescu"
+                    fill
+                    className="object-cover"
+                    quality={75}
+                  />
+                  <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
+                </div>
+
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  <p className="font-serif text-2xl md:text-3xl text-gray-900 mb-2">
+                    Psihoterapeut Laura Popescu
+                  </p>
                 </div>
               </div>
             </div>
+            
           </section>
 
 
           {/* Call to action */}
           <section className="bg-gray-800 rounded-4xl p-12 text-center">
             <h2 className="font-serif text-3xl text-white mb-4">
-              Hai să vorbim
+              Programează o ședință
             </h2>
             <p className="font-sans text-lg text-white mb-8">
-              Mă poți contacta dacă ești pregătit să faci primul pas spre schimbare.
+            Contactează-mă dacă ești pregătit/ă să faci primul pas spre schimbare.
             </p>
             <Link 
               href="/#contact"

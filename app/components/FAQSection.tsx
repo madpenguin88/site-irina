@@ -8,7 +8,7 @@ export default function FAQSection() {
   const intrebari = [
     {
       intrebare: "Cum știu dacă am nevoie de terapie?",
-      raspuns: "Dacă te întrebi acest lucru, probabil că ai deja un răspuns.\n\nOamenii vin la terapie când simt că ceva nu mai funcționează — anxietate care blochează, tristețe persistentă, relații epuizante sau senzația că reacționezi mereu la fel, indiferent de situație.\n\nTerapia nu e doar pentru „cei cu probleme”. E pentru cine vrea să trăiască mai bine, să se înțeleagă mai profund și să descopere alternative mai sănătoase. Oricare ar fi motivul tău, aici găsești un spațiu sigur în care să explorezi ce simți și să deschizi căi noi către o viață mai împlinită."
+      raspuns: "Dacă te întrebi acest lucru, probabil că ai deja un răspuns.\n\nOamenii vin la terapie când simt că ceva nu mai funcționează — anxietate care blochează, tristețe persistentă, relații epuizante sau senzația că reacționează mereu la fel, indiferent de situație.\n\nMulți oameni cred că terapia este doar pentru momentele de criză sau suferință profundă. În realitate, terapia are și un rol preventiv — te ajută să te cunoști mai bine și să previi acumularea unor tensiuni greu de gestionat mai târziu. E pentru oricine vrea să trăiască mai bine, să se înțeleagă mai profund și să descopere alternative mai sănătoase.\n\nOricare ar fi motivul tău, aici găsești un spațiu sigur în care să explorezi ce simți și să deschizi căi noi către o viață mai împlinită."
     },
     {
       intrebare: "Este confidențial?",
@@ -20,7 +20,7 @@ export default function FAQSection() {
     },
     {
       intrebare: "Cum decurge prima ședință?",
-      raspuns: "Ne cunoaștem și vorbim deschis despre ce te aduce la terapie - motivul pentru care ai făcut acest pas și așteptările pe care le ai de la procesul terapeutic.\n\nÎmi vei povesti despre situația ta actuală, dar și despre contextul mai larg al vieții tale - familie, relații, muncă. Vreau să te înțeleg ca persoană completă, nu doar ca o „problemă de rezolvat”.\n\nSemnăm împreună contractul terapeutic, care clarifică confidențialitatea, cum colaborăm și aspectele practice ale procesului. Este o conversație naturală, într-un spațiu sigur, fără judecată."
+      raspuns: "Ne cunoaștem și vorbim deschis despre ce te aduce la terapie - motivul pentru care ai făcut acest pas și așteptările pe care le ai de la procesul terapeutic.\n\nÎmi vei povesti despre situația ta actuală, dar și despre contextul mai larg al vieții tale - familie, relații, muncă - pentru că vreau să te cunosc ca persoană completă, nu doar prin prisma unei „probleme de rezolvat”.\n\nTot acum semnăm împreună contractul terapeutic, care clarifică confidențialitatea, modul în care colaborăm și aspectele practice ale procesului.\n\nEste, în esență, o conversație naturală, într-un spațiu sigur, fără judecată."
     },
     {
       intrebare: "Despre ce trebuie să vorbesc în terapie?",
@@ -28,7 +28,7 @@ export default function FAQSection() {
     },
     {
       intrebare: "În cât timp văd rezultate?",
-      raspuns: "Nu există un răspuns universal - fiecare persoană e unică și progresul diferă.\n\nUneori schimbări pot apărea chiar din prima ședință - o perspectivă nouă, un sentiment de ușurare sau o claritate care lipsea. Alteori, sunt necesare mai multe ședințe pentru a înțelege tiparele și a explora posibilități de schimbare. Unii clienți aleg un proces mai îndelungat pentru transformări mai profunde. Nu lucrăm după un calendar prestabilit, ci în ritmul tău.\n\nProgresul vine pe măsură ce începi să înțelegi cum funcționezi și să experimentezi alternative noi. Rezultatele depind de implicarea ta în proces, de curajul tău de a te schimba și de relația de colaborare pe care o construim împreună.\n\nImportant e să îți permiți să progresezi în ritmul tău, fără să te compari cu alți oameni sau să ai așteptări nerealiste."
+      raspuns: "Nu există un răspuns universal - fiecare persoană e unică și progresul diferă. Uneori schimbări pot apărea chiar din prima ședință - o perspectivă nouă, un sentiment de ușurare sau o claritate care lipsea. Alteori, sunt necesare mai multe ședințe pentru a înțelege tiparele și a explora posibilități de schimbare. \n\nUnii clienți aleg un proces mai îndelungat pentru transformări mai profunde. Nu lucrăm după un calendar prestabilit, ci în ritmul tău. Progresul vine pe măsură ce începi să înțelegi cum funcționezi și să experimentezi alternative noi. \n\nRezultatele depind de implicarea ta în proces, de curajul tău de a te schimba și de relația de colaborare pe care o construim împreună. Permite-ți să evoluezi în ritmul tău, fără să te compari cu ceilalți. Fiecare progres, oricât de mic, contează."
     },
     {
       intrebare: "Pot anula/reprograma ședința?",

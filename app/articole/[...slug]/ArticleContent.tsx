@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Navbar from "../../components/Navbar";
 
 interface Article {
   id: string;
@@ -76,40 +77,7 @@ export default function ArticleContent({ slug }: { slug: string }) {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          {/* Logo / Brand */}
-          <Link href="/" className="flex flex-col">
-            <h1 className="text-md font-semibold text-gray-900" style={{ fontFamily: 'var(--font-cinzel)' }}>
-              Irina Gospodaru
-            </h1>
-            <p className="font-script text-lg text-gray-600">
-              Psihoterapeut Adlerian
-            </p>
-          </Link>
-
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/#despre" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              DESPRE MINE
-            </Link>
-            <Link href="/articole" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              ARTICOLE
-            </Link>
-
-            <Link href="/#servicii" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              SERVICII
-            </Link>            
-            <Link href="/#intrebari" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              ÎNTREBĂRI
-            </Link>          
-            <Link href="/#contact" className="font-sans text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              CONTACT
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar activePage="articole" />
 
       {/* Content */}
       <div className="pt-32 pb-20 px-6">
