@@ -1,9 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useT } from './LanguageProvider';
 
 export default function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const t = useT();
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -25,7 +27,7 @@ export default function BackToTop() {
       className={`fixed bottom-8 right-8 bg-gray-900 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-800 hover:scale-110 transition-all duration-300 z-50 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
-      aria-label="Înapoi sus"
+      aria-label={t('backToTop.label')}
     >
       <svg 
         xmlns="http://www.w3.org/2000/svg" 

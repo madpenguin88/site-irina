@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
+import { useLang, useT } from './LanguageProvider';
 
 export type NavSection = 'acasa' | 'despre' | 'articole' | 'servicii' | 'intrebari' | 'contact';
 
@@ -20,6 +21,8 @@ const SCROLL_SECTIONS: { id: string; section: NavSection }[] = [
 export default function Navbar({ activePage }: NavbarProps) {
   const pathname = usePathname();
   const isHome = pathname === '/';
+  const { lang, toggleLang } = useLang();
+  const t = useT();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollSection, setScrollSection] = useState<NavSection>('acasa');
 
@@ -75,42 +78,42 @@ export default function Navbar({ activePage }: NavbarProps) {
         onClick={mobile ? closeMobile : undefined}
         className={linkClass('acasa', mobile)}
       >
-        ACASĂ
+        {t('nav.home')}
       </Link>
       <Link
         href="/despre"
         onClick={mobile ? closeMobile : undefined}
         className={linkClass('despre', mobile)}
       >
-        DESPRE MINE
+        {t('nav.about')}
       </Link>
       <Link
         href="/articole"
         onClick={mobile ? closeMobile : undefined}
         className={linkClass('articole', mobile)}
       >
-        ARTICOLE
+        {t('nav.articles')}
       </Link>
       <Link
         href="/servicii"
         onClick={mobile ? closeMobile : undefined}
         className={linkClass('servicii', mobile)}
       >
-        SERVICII
+        {t('nav.services')}
       </Link>
       <a
         href={hashHref('intrebari')}
         onClick={mobile ? closeMobile : undefined}
         className={linkClass('intrebari', mobile)}
       >
-        ÎNTREBĂRI
+        {t('nav.faq')}
       </a>
       <a
         href={hashHref('contact')}
         onClick={mobile ? closeMobile : undefined}
         className={linkClass('contact', mobile)}
       >
-        CONTACT
+        {t('nav.contact')}
       </a>
     </>
   );
@@ -123,12 +126,19 @@ export default function Navbar({ activePage }: NavbarProps) {
             Irina Gospodaru
           </h1>
           <p className="font-script text-lg text-gray-600">
-            Psihoterapeut Adlerian
+            {t('nav.tagline')}
           </p>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-4">
           {navLinks()}
+          <button
+            onClick={() => toggleLang()}
+            className="ml-4 px-3 py-2 bg-emerald-600 text-white rounded-full font-semibold shadow-md hover:bg-emerald-500 transition-colors"
+            aria-label="Toggle language"
+          >
+            {lang === 'ro' ? 'EN' : 'RO'}
+          </button>
         </div>
 
         <button
@@ -146,11 +156,17 @@ export default function Navbar({ activePage }: NavbarProps) {
         </button>
       </div>
 
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-6 py-4 space-y-4 bg-white/95 backdrop-blur-sm border-t border-gray-200">
           {navLinks(true)}
+          <div className="pt-2">
+            <button onClick={() => toggleLang()} className="px-3 py-2 bg-emerald-600 text-white rounded-md font-medium">
+              {lang === 'ro' ? 'EN' : 'RO'}
+            </button>
+          </div>
         </div>
       </div>
     </nav>
   );
 }
+

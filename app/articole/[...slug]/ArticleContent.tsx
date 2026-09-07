@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
+import { useT } from "../../components/LanguageProvider";
 
 interface Article {
   id: string;
@@ -32,6 +33,7 @@ function slugify(text: string): string {
 }
 
 export default function ArticleContent({ slug }: { slug: string }) {
+  const t = useT();
   const [article, setArticle] = useState<Article | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -95,8 +97,8 @@ export default function ArticleContent({ slug }: { slug: string }) {
               <div className="bg-red-50 rounded-2xl p-8 border border-red-200 mb-8">
                 <p className="font-sans text-red-600 text-lg mb-2">
                   {error === "Article not found" 
-                    ? "Articolul nu a fost găsit." 
-                    : "Nu s-a putut încărca articolul."}
+                    ? t('article.not_found') 
+                    : t('article.load_error')}
                 </p>
                 <p className="font-sans text-red-500 text-sm">{error}</p>
               </div>
@@ -104,7 +106,7 @@ export default function ArticleContent({ slug }: { slug: string }) {
                 href="/articole"
                 className="inline-block px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
               >
-                Înapoi la articole
+                {t('article.back_to_list')}
               </Link>
             </div>
           )}
@@ -117,7 +119,7 @@ export default function ArticleContent({ slug }: { slug: string }) {
                 href="/articole"
                 className="inline-flex items-center font-sans text-sm text-gray-600 hover:text-gray-900 mb-8 transition-colors"
               >
-                ← Înapoi la articole
+                {t('article.back_to_list')}
               </Link>
 
               {/* Article Header */}
@@ -169,7 +171,7 @@ export default function ArticleContent({ slug }: { slug: string }) {
                   href="/articole"
                   className="inline-block px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
                 >
-                  Vezi toate articolele
+                  {t('article.view_all')}
                 </Link>
               </footer>
             </article>

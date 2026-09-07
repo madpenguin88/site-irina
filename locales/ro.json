@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "ACASĂ",
+    "about": "DESPRE MINE",
+    "articles": "ARTICOLE",
+    "services": "SERVICII",
+    "faq": "ÎNTREBĂRI",
+    "contact": "CONTACT",
+    "lang_toggle": "RO",
+    "tagline": "Psihoterapeut Adlerian"
+  },
+  "backToTop": {
+    "label": "Înapoi sus"
+  },
+  "alt": {
+    "profile": "Irina Gospodaru - Psihoterapeut",
+    "individual": "Cadru terapeutic",
+    "couple": "Mediu terapie de cuplu",
+    "family": "Detaliu din cabinetul de terapie",
+    "recommendation_bg": "Imagine de fundal",
+    "ryota_logo": "Logo Ryota",
+    "ryota_name": "Logo nume Ryota",
+    "laura_bg": "Fundal Laura Popescu",
+    "laura_logo": "Logo Laura Popescu"
+  },
+  "despre": {
+    "title": "Despre mine",
+    "intro_lead": "Sunt psiholog clinician și psihoterapeut adlerian.",
+    "intro_paragraph": "Am ales această profesie pentru că vreau să fiu alături de oameni în momentele în care decid să facă schimbări reale în viața lor - schimbări pe care le pot simți și observa cu adevărat, să poată depăși situațiile provocatoare și să simtă o evoluție reală, atât pentru sine, cât și în relațiile sociale și profesionale.",
+    "how_i_work_title": "Cum lucrez?",
+    "how_i_work_lead": "Cred că schimbarea reală nu se întâmplă doar în cabinet, ci atunci când se extinde în viața de zi cu zi.",
+    "individual_title": "În terapia individuală",
+    "individual_p1": "De cele mai multe ori, oamenii ajung în cabinet purtând cu ei o poveste despre dificultate: o relație care nu (mai) funcționează sau absența uneia, un sentiment persistent de neîncredere în sine, o imagine de sine fragilă, tensiuni la locul de muncă, prietenii care rămân la suprafață, sau pur și simplu o acumulare de anxietate și stres care a devenit greu de dus. În terapie explorăm împreună tiparele care nu-ți mai sunt utile și construim, pas cu pas, direcții noi care au sens pentru tine.",
+    "individual_p2": "Ceea ce descoperi și schimbi în cabinet se reflectă apoi în toate aspectele vieții tale importante, creând un efect de undă care transformă experiența ta în lume.",
+    "couple_title": "În terapia de cuplu",
+    "couple_p1": "Terapia de cuplu nu ia partea nimănui — relația însăși este cea pe care o susținem împreună. Fie că vorbim despre infidelitate și reconstruirea încrederii, comunicare blocată sau distanțare emoțională, focusul rămâne pe voi doi ca pereche, nu pe găsirea unui vinovat.",
+    "couple_p2": "Ambii parteneri contribuie activ la transformarea relației, iar schimbările pe care le faceți împreună devin vizibile în dinamica voastră de zi cu zi.",
+    "family_title": "În terapia de familie",
+    "family_p1": "Clientul este familia. Lucrăm asupra rolurilor voastre de părinți și asupra modului în care puteți construi împreună un stil de viață sănătos, iar tot ceea ce descoperiți în terapie este adaptat provocărilor specifice familiei voastre. Scopul este ca fiecare membru al familiei să simtă că are locul lui, că rolul său contează, că este capabil, iar prezența lui este valoroasă pentru întreaga familie.",
+    "family_p2": "Ceea ce descoperiți în cabinet prinde rădăcini acasă — în felul în care vă vorbiți, vă ascultați și vă sprijiniți unii pe alții, zi de zi.",
+    "final_p1": "În terapie, nu există formule universale - ceea ce funcționează pentru tine poate să nu fie potrivit pentru altcineva.",
+    "final_p2": "De aceea, abordarea mea se centrează pe fiecare persoană în parte, pe ritmul și povestea sa unică. Tu ești expertul propriei tale vieți, iar eu sunt acolo să te însoțesc în explorarea a ceea ce te blochează, să analizăm împreună tiparele care nu-ți mai sunt utile și să descoperi noi direcții care au sens pentru evoluția ta.",
+    "professional_title": "Pregătire profesională",
+    "professional_lead": "Pregătirea solidă și perfecționarea continuă sunt esențiale pentru un sprijin autentic și eficient.",
+    "university_title": "Pregătire universitară",
+    "university_list": [
+      "Licență în Business Management (4 ani) - Canterbury Christ Church University, UK",
+      "Licență în Psihologie (3 ani) - Universitatea Ovidius, Constanța",
+      "Master în Psihoterapii și Psihologie Clinică (2 ani) - Universitatea Tibiscus, Timișoara"
+    ],
+    "postgrad_title": "Pregătire post-universitară",
+    "postgrad_list": [
+      "Formare în Psihoterapie Adleriană (2 ani) - Institutul Alfred Adler",
+      "Supervizare în Psihoterapie Adleriană - Institutul Alfred Adler",
+      "Supervizare în Psihologie Clinică"
+    ],
+    "professional_note": "Particip constant la training-uri, workshop-uri și seminarii din abordarea adleriană, atât la nivel național, cât și internațional, alături de specialiști cu experiență vastă în domeniul psihoterapiei. Învățarea nu se oprește niciodată - mă perfecționez continuu pentru a-ți putea oferi cel mai bun suport posibil."
+  },
+  "recommendations": {
+    "subtitle": "Fiecare pas făcut împreună ne apropie de o lume mai stabilă emoțional.",
+    "program_title": "Program de Dezvoltare Socială și Emoțională",
+    "title": "Recomandări",
+    "collab_role": "Psihoterapeut & Psihosexolog"
+  },
+  "home": {
+    "hero_line1": "Bine ai venit în",
+    "hero_line2": "spațiul tău de transformare",
+    "hero_paragraph": "Indiferent de motivul pentru care ai ajuns aici, ceva din tine vrea să evolueze. Drumul spre o viață mai împlinită începe cu o singură decizie. Hai să descoperim împreună ce e posibil.",
+    "cta_book": "Programează o ședință"
+  },
+  "services": {
+    "title": "Servicii",
+    "lead": "Oriunde ai fi pe drumul tău, există un loc de unde poți începe - și nu trebuie să mergi singur.",
+    "learn_more": "Află mai mult despre servicii și tarife",
+    "book": "Programează o ședință",
+    "prevention": "Prevenția psihologică este cea mai înțeleaptă investiție pe care o poți face în tine. Este mult mai ușor să rezolvi lucrurile când abia încep să te apese decât când deja te copleșesc.",
+    "urgent_line": "Nu aștepta să fie urgent ca să devină important.",
+    "categories": [
+      {
+        "label": "Individual",
+        "items": [
+          { "name": "Evaluare psihologică", "price": "300 RON", "note": "50 minute" },
+          { "name": "Psihoterapie individuală", "price": "300 RON", "note": "50 minute" },
+          { "name": "Consiliere psihologică", "price": "300 RON", "note": "50 minute" },
+          { "name": "Dezvoltare personală", "price": "300 RON", "note": "50 minute" }
+        ]
+      },
+      {
+        "label": "Cuplu și familie",
+        "items": [
+          { "name": "Psihoterapie de Cuplu", "price": "500 RON", "note": "90 minute" },
+          { "name": "Psihoterapie de Familie", "price": "500 RON", "note": "90 minute" }
+        ]
+      },
+      {
+        "label": "Grupuri",
+        "items": [
+          { "name": "Grupuri de suport", "price": "200 RON", "note": "120 minute" },
+          { "name": "Grupuri de dezvoltare personală", "price": "200 RON", "note": "120 minute" }
+        ]
+      }
+    ],
+    "how_title": "Cum funcționează?",
+    "how_p1": "Prima ședință este dedicată evaluării și cunoașterii reciproce. Împreună stabilim obiectivele terapiei și frecvența ședințelor.",
+    "how_p2": "Ședințele pot avea loc față în față în cabinetul din Constanta sau online, în funcție de preferințele și nevoile tale."
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Nu trebuie să știi exact ce cauți. Trebuie doar să simți că ceva poate fi și altfel.",
+    "address_label": "Adresă",
+    "address_text": "Strada Primăverii 6, Constanta",
+    "whatsapp_label": "WhatsApp",
+    "facebook_label": "Facebook",
+    "facebook_text": "Psiholog Irina Gospodaru",
+    "instagram_label": "Instagram",
+    "instagram_text": "@psiholog.irinagospodaru",
+    "schedule_title": "Cum programăm prima ședință?",
+    "schedule_text": "Pentru a face o programare, scrie-mi un mesaj pe WhatsApp în care să menționezi serviciul psihologic dorit. Vei fi contactat/ă în cel mai scurt timp pentru stabilirea programării."
+  },
+  "articles": {
+    "title": "Articole",
+    "lead": "Articole despre psihologie, dezvoltare personală și sănătate mentală.",
+    "error_fetch": "Nu s-au putut încărca articolele. Asigură-te că serverul API rulează.",
+    "empty": "Momentan nu există articole publicate. Reveniti în curând!",
+    "read_more": "Citește mai mult →",
+    "back_home": "Înapoi la pagina principală"
+  },
+  "article": {
+    "back_to_list": "← Înapoi la articole",
+    "not_found": "Articolul nu a fost găsit.",
+    "load_error": "Nu s-a putut încărca articolul.",
+    "view_all": "Vezi toate articolele"
+  },
+  "faq": {
+    "title": "Răspunsuri la cele mai frecvente întrebări despre psihoterapie",
+    "items": [
+      {
+        "question": "Cum știu dacă am nevoie de terapie?",
+        "answer": "Dacă te întrebi acest lucru, probabil că ai deja un răspuns.\n\nOamenii vin la terapie când simt că ceva nu mai funcționează — anxietate care blochează, tristețe persistentă, relații epuizante sau senzația că reacționează mereu la fel, indiferent de situație.\n\nMulți oameni cred că terapia este doar pentru momentele de criză. În realitate, terapia are și un rol preventiv — te ajută să te cunoști mai bine și să previi acumularea unor tensiuni greu de gestionat mai târziu. E pentru oricine vrea să trăiască mai bine, să se înțeleagă mai profund și să descopere alternative mai sănătoase.\n\nOricare ar fi motivul tău, aici găsești un spațiu sigur în care să explorezi ce simți și să deschizi căi noi către o viață mai împlinită."
+      },
+      {
+        "question": "Este confidențial?",
+        "answer": "Da, complet. Tot ce discutăm rămâne strict confidențial, cu excepția situațiilor în care există un pericol iminent pentru viața sau siguranța ta ori a altcuiva, sau când legea impune raportarea.\n\nAceste excepții legale sunt:\n• Risc iminent de suicid sau auto-vătămare gravă\n• Risc de vătămare a unei alte persoane\n• Abuz fizic, sexual sau neglijare asupra copiilor sau persoanelor vulnerabile\n• Ordonanță judecătorească care solicită informații\n\nVei fi informat clar despre aceste limite ale confidențialității încă de la prima ședință, specificate în contractul terapeutic."
+      },
+      {
+        "question": "Cum funcționează un proces psihoterapeutic?",
+        "answer": "Durata și intensitatea psihoterapiei depind de nevoile tale și de obiectivele pe care îți dorești să le atingi. Nu există un format rigid - procesul se adaptează ritmului și unicității tale.\n\nPsihoterapia adleriană este flexibilă: putem lucra pe o problemă specifică prin strategii practice, sau putem explora mai profund tiparele relaționale și sensul comportamentelor tale pentru a construi schimbări durabile.\n\nLa prima întâlnire stabilim împreună ce îți dorești. Nu trebuie să ai toate răspunsurile de la început — terapia poate evolua pe parcurs, iar decizia de a continua sau de a te opri îți aparține oricând."
+      },
+      {
+        "question": "Cum decurge prima ședință?",
+        "answer": "Ne cunoaștem și vorbim deschis despre ce te aduce la terapie - motivul pentru care ai făcut acest pas și așteptările pe care le ai de la procesul terapeutic.\n\nÎmi vei povesti despre situația ta actuală și contextul mai larg al vieții tale - familie, relații, muncă - pentru că vreau să te cunosc ca persoană completă, nu doar prin prisma unei probleme de rezolvat.\n\nTot acum semnăm împreună contractul terapeutic, care clarifică confidențialitatea, modul în care colaborăm și aspectele practice ale procesului. Este, în esență, o conversație naturală, într-un spațiu sigur, fără judecată."
+      },
+      {
+        "question": "Despre ce trebuie să vorbesc în terapie?",
+        "answer": "Despre orice consideri că e important pentru tine. Nu există un subiect «corect» sau «greșit» - fiecare persoană vine cu experiența ei unică.\n\nPoți vorbi despre dificultăți actuale, relații, emoții care te copleșesc, gânduri recurente, amintiri, vise, îndoieli sau momente de împlinire. Chiar și lucrurile care ți se par mărunte pot dezvălui aspecte importante despre modul tău de a funcționa în lume.\n\nDin perspectivă adleriană, tot ce aduci în terapie are un sens și un scop — chiar dacă nu e evident de la început. Eu sunt aici să explorez alături de tine, să te încurajez și să te ajut să vezi perspective noi în drumul către obiectivele pe care le alegi tu însuți. Tu decizi cât de mult vrei să împărtăși și în ce ritm. Terapia e spațiul tău."
+      },
+      {
+        "question": "În cât timp văd rezultate?",
+        "answer": "Nu există un răspuns universal - fiecare persoană e unică și progresul diferă. Uneori schimbări pot apărea chiar din prima ședință - o perspectivă nouă, un sentiment de ușurare sau o claritate care lipsea. Alteori, sunt necesare mai multe ședințe pentru a înțelege tiparele și a explora posibilități de schimbare.\n\nUnii clienți aleg un proces mai îndelungat pentru transformări mai profunde. Nu lucrăm după un calendar prestabilit, ci în ritmul tău. Progresul vine pe măsură ce începi să înțelegi cum funcționezi și să experimentezi alternative noi.\n\nRezultatele depind de implicarea ta, de curajul tău de a te schimba și de relația de colaborare pe care o construim împreună. Permite-ți să evoluezi în ritmul tău, fără să te compari cu ceilalți. Fiecare progres, oricât de mic, contează."
+      },
+      {
+        "question": "Pot anula/reprograma ședința?",
+        "answer": "Da, poți anula sau reprograma cu cel puțin 24 de ore înainte, anunțându-mă printr-un mesaj sau un apel telefonic. Înțeleg că uneori apar situații neprevăzute. Ședințele anulate în mai puțin de 24 de ore se achită integral. Politica de anulare o stabilim împreună la prima întâlnire și este inclusă în contractul terapeutic."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Irina Gospodaru - Psihoterapeut Adlerian. Toate drepturile rezervate."
+  }
+}

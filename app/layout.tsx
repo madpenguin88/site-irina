@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Open_Sans, Cormorant_Garamond, Great_Vibes, Cinzel } from "next/font/google";
+// @ts-expect-error - side-effect CSS import may not have type declarations
 import "./globals.css";
+import LanguageProvider from "./components/LanguageProvider";
 
 // Open Sans - Regular sans-serif font
 const openSans = Open_Sans({
@@ -35,8 +37,8 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "Irina Gospodaru - Psihoterapeut Adlerian",
-  description: "Psiholog clinician și psihoterapeut cu orientare adleriană. Psihoterapie individuală, de cuplu și familie. Cabinet în București.",
+  title: "Irina Gospodaru - Adlerian Psychotherapist",
+  description: "Adlerian psychotherapist and clinical psychologist offering individual, couple, and family therapy. Based in Constanta.",
 };
 
 export default function RootLayout({
@@ -49,7 +51,9 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${theSeasons.variable} ${handwritingFont.variable} ${cinzel.variable} antialiased`}
       >
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

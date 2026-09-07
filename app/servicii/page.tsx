@@ -1,48 +1,18 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import BackToTop from "../components/BackToTop";
 import Navbar from "../components/Navbar";
+import { useT } from "../components/LanguageProvider";
 
-const services = [
-  "Evaluare Psihologică",
-  "Psihoterapie Individuală",
-  "Psihoterapie de Cuplu",
-  "Psihoterapie de Familie",
-  "Psihoterapie de Grup",
-  "Grupuri de Suport",
-  "Consiliere Psihologică",
-  "Dezvoltare Personală",
-];
-
-const serviceCategories = [
-  {
-    label: "Individual",
-    items: [
-      { name: "Evaluare psihologică", price: 300, duration: "50 minute" },
-      { name: "Psihoterapie individuală", price: 300, duration: "50 minute" },
-      { name: "Consiliere psihologică", price: 300, duration: "50 minute" },
-      { name: "Dezvoltare personală", price: 300, duration: "50 minute" },
-    ],
-  },
-  {
-    label: "Cuplu și familie",
-    items: [
-      { name: "Psihoterapie de Cuplu", price: 500, duration: "90 minute" },
-      { name: "Psihoterapie de Familie", price: 500, duration: "90 minute" },
-    ],
-  },
-  {
-    label: "Grupuri",
-    items: [
-      { name: "Grupuri de suport", price: 200, duration: "120 minute" },
-      { name: "Grupuri de dezvoltare personală", price: 200, duration: "120 minute" },
-    ],
-  },
-];
+type ServiceItem = { name: string; price: string; note: string };
+type ServiceCategory = { label: string; items: ServiceItem[] };
 
 export default function ServiciiPage() {
+  const t = useT();
+  const serviceCategories = (t('services.categories') || []) as ServiceCategory[];
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar activePage="servicii" />
@@ -57,29 +27,26 @@ export default function ServiciiPage() {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-4 text-center">
-              Servicii & Tarife
+              {t('services.title')} — {t('services.learn_more')}
             </h2>
             <p className="font-sans text-lg text-gray-600 mb-6 text-center max-w-4xl mx-auto">
-            Oriunde ai fi pe drumul tău, există un loc de unde poți începe, și nu trebuie să mergi singur.
+              {t('services.lead')}
             </p>
             <p className="font-sans text-lg text-gray-600 mb-6 text-center max-w-4xl mx-auto">
-              Prevenția psihologică este cea mai înțeleaptă investiție pe care o poți face în tine. <br />Este mult mai ușor să rezolvi lucrurile când abia încep să te apese decât când deja te copleșesc. <br />
+              {t('services.prevention')}
             </p>
              <p className="text-md text-gray-600 mb-12 text-center max-w-4xl mx-auto" style={{ fontFamily: 'var(--font-cinzel)' }}>
-              <b>Nu aștepta să fie urgent ca să devină important.</b>
+              <b>{t('services.urgent_line')}</b>
             </p>
 
             <div className="max-w-3xl mx-auto space-y-8">
-              {serviceCategories.map((category) => (
+              {serviceCategories.map((category: ServiceCategory) => (
                 <div key={category.label} className="rounded-2xl bg-gray-50/50 px-5 py-5 md:px-6">
                   <p className="font-sans text-xs uppercase tracking-[0.2em] text-gray-400 mb-3">
                     {category.label}
                   </p>
                   <ul className="divide-y divide-gray-200/80">
-                    {category.items.map((item) => {
-                      const isGroupCategory = category.label === "Grupuri";
-
-                      return (
+                    {category.items.map((item: ServiceItem) => (
                         <li
                           key={item.name}
                           className="py-4 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6"
@@ -88,11 +55,10 @@ export default function ServiciiPage() {
                             {item.name}
                           </span>
                           <span className="font-sans text-base text-gray-600 shrink-0">
-                            {item.price} RON — {isGroupCategory ? "sesiune" : "ședință"} / {item.duration}
+                            {item.price} — {item.note}
                           </span>
                         </li>
-                      );
-                    })}
+                    ))}
                   </ul>
                 </div>
               ))}
@@ -103,13 +69,13 @@ export default function ServiciiPage() {
           <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
             <div className="space-y-4">
               <h3 className="font-serif text-2xl text-gray-800">
-                Cum funcționează?
+                {t('services.how_title')}
               </h3>
               <p className="font-sans text-base text-gray-500 leading-relaxed">
-                Prima ședință este dedicată evaluării și cunoașterii reciproce. Împreună stabilim obiectivele terapiei și frecvența ședințelor.
+                {t('services.how_p1')}
               </p>
               <p className="font-sans text-base text-gray-500 leading-relaxed">
-                Ședințele pot avea loc față în față în cabinetul din Constanța sau online, în funcție de preferințele și nevoile tale.
+                {t('services.how_p2')}
               </p>
             </div>
             
@@ -130,16 +96,16 @@ export default function ServiciiPage() {
           {/* Call to action */}
           <section className="border border-gray-200 rounded-2xl p-10 md:p-12 text-center">
             <h2 className="font-serif text-2xl md:text-3xl text-gray-800 mb-3">
-              Programează o ședință
+              {t('services.book')}
             </h2>
             <p className="font-sans text-base text-gray-500 mb-6 max-w-lg mx-auto">
-              Dacă ai întrebări despre servicii sau tarife, nu ezita să mă contactezi.
+              {t('services.lead')}
             </p>
             <Link 
               href="/#contact"
               className="inline-block px-7 py-3 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-700 transition-colors"
             >
-              Contactează-mă
+              {t('contact.title')}
             </Link>
           </section>
         </div>
@@ -149,7 +115,7 @@ export default function ServiciiPage() {
       <footer className="bg-gray-900 py-12 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <p className="font-sans text-gray-400">
-            © 2026 Irina Gospodaru - Psihoterapeut Adlerian. Toate drepturile rezervate.
+            {t('footer.copyright')}
           </p>
         </div>
       </footer>

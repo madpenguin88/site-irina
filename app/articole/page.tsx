@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
+import { useT } from "../components/LanguageProvider";
 
 interface Article {
   id: string;
@@ -32,6 +33,7 @@ function slugify(text: string): string {
 }
 
 export default function ArticolePage() {
+  const t = useT();
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -88,10 +90,10 @@ export default function ArticolePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="font-serif text-5xl md:text-6xl text-gray-900 mb-6">
-              Articole
+              {t('articles.title')}
             </h1>
             <p className="font-sans text-lg text-gray-600">
-              Articole despre psihologie, dezvoltare personală și sănătate mentală.
+              {t('articles.lead')}
             </p>
           </div>
 
@@ -104,9 +106,9 @@ export default function ArticolePage() {
 
           {/* Error State */}
           {error && (
-            <div className="bg-red-50 rounded-2xl p-8 border border-red-200 text-center">
+              <div className="bg-red-50 rounded-2xl p-8 border border-red-200 text-center">
               <p className="font-sans text-red-600 text-lg mb-4">
-                Nu s-au putut încărca articolele. Asigură-te că serverul API rulează.
+                {t('articles.error_fetch')}
               </p>
               <p className="font-sans text-red-500 text-sm">{error}</p>
             </div>
@@ -116,7 +118,7 @@ export default function ArticolePage() {
           {!loading && !error && articles.length === 0 && (
             <div className="bg-gray-50 rounded-2xl p-12 border border-gray-200 text-center">
               <p className="font-sans text-gray-500 text-lg">
-                Momentan nu există articole publicate. Reveniti în curând!
+                {t('articles.empty')}
               </p>
             </div>
           )}
@@ -168,7 +170,7 @@ export default function ArticolePage() {
                               href={`/articole/${slugify(article.title)}`}
                               className="inline-block font-sans text-sm text-gray-900 font-medium hover:underline"
                             >
-                              Citește mai mult →
+                              {t('articles.read_more')}
                             </Link>
                           </div>
                         </article>
@@ -184,7 +186,7 @@ export default function ArticolePage() {
               href="/"
               className="inline-block px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
             >
-              Înapoi la pagina principală
+              {t('articles.back_home')}
             </Link>
           </div>
         </div>

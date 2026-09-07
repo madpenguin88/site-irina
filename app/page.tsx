@@ -1,12 +1,20 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import BackToTop from "./components/BackToTop";
 import FAQSection from "./components/FAQSection";
 import Navbar from "./components/Navbar";
+import { useT } from "./components/LanguageProvider";
 
 export default function Home() {
+  const t = useT();
+  type ServiceItem = { name: string };
+  type ServiceCategory = { label: string; items: ServiceItem[] };
+  const serviceTiles = ((t('services.categories') || []) as ServiceCategory[])
+    .flatMap((c) => c.items)
+    .slice(0, 8);
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -21,17 +29,17 @@ export default function Home() {
             {/* Left - Text */}
             <div className="space-y-6">
               <h2 className="font-serif text-5xl md:text-6xl text-gray-900 leading-tight">
-                Bine ai venit în
-                <span className="block text-gray-600 mt-2">spațiul tău de transformare</span>
+                {t('home.hero_line1')}
+                <span className="block text-gray-600 mt-2">{t('home.hero_line2')}</span>
               </h2>
               <p className="font-sans text-lg text-gray-600 leading-relaxed">
-                Indiferent de motivul pentru care ai ajuns aici, ceva din tine vrea să evolueze. Drumul spre o viață mai împlinită începe cu o singură decizie. Hai să descoperim împreună ce e posibil.
+                {t('home.hero_paragraph')}
               </p>
               <a 
                 href="#contact"
                 className="inline-block px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
               >
-                Programează o ședință
+                {t('home.cta_book')}
               </a>
             </div>
 
@@ -39,7 +47,7 @@ export default function Home() {
             <div className="relative h-[500px] rounded-3xl overflow-hidden bg-gray-100">
               <Image
                 src="/pictures/home.jpeg"
-                alt="Irina Gospodaru - Psihoterapeut"
+                alt={t('alt.profile')}
                 fill
                 className="object-cover"
                 priority
@@ -55,75 +63,22 @@ export default function Home() {
       <section id="servicii" className="py-12 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
-            Servicii
+            {t('services.title')}
           </h2>
           <p className="font-sans text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-            Oriunde ai fi pe drumul tău, există un loc de unde poți începe - și nu trebuie să mergi singur.
+            {t('services.lead')}
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Service Card 1 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg text-center items-center justify-center transition-all cursor-pointer">
-              <h3 className="font-serif text-xl text-gray-900">
-                Evaluare Psihologică
-              </h3>
-            </Link>
-
-            {/* Service Card 2 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg text-center items-center justify-center transition-all cursor-pointer">
-              <h3 className="font-serif text-xl text-gray-900">
-                Psihoterapie Individuală
-              </h3>
-            
-            </Link>
-
-            {/* Service Card 3 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg text-center items-center justify-center transition-all cursor-pointer">
-              <h3 className="font-serif text-xl text-gray-900">
-                Psihoterapie de Cuplu
-              </h3>
-            
-            </Link>
-
-            {/* Service Card 4 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg text-center items-center justify-center transition-all cursor-pointer">
-              <h3 className="font-serif text-xl text-gray-900">
-                Psihoterapie de Familie
-              </h3>
-            
-            </Link>
-
-            {/* Service Card: Psihoterapie de Grup */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg text-center items-center justify-center transition-all cursor-pointer">
-              <h3 className="font-serif text-xl text-gray-900">
-                Psihoterapie de Grup
-              </h3>
-            
-            </Link>
-
-            {/* Service Card: Grupuri de Suport */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg text-center items-center justify-center transition-all cursor-pointer">
-              <h3 className="font-serif text-xl text-gray-900">
-                Grupuri de Suport
-              </h3>
-            
-            </Link>
-
-            {/* Service Card 5 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg text-center items-center justify-center transition-all cursor-pointer">
-              <h3 className="font-serif text-xl text-gray-900">
-                Consiliere Psihologică
-              </h3>
-          
-            </Link>
-
-            {/* Service Card 6 */}
-            <Link href="/servicii" className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg text-center items-center justify-center transition-all cursor-pointer">
-              <h3 className="font-serif text-xl text-gray-900">
-                Dezvoltare Personală
-              </h3>
-            
-            </Link>
+            {serviceTiles.map((item) => (
+              <Link
+                key={item.name}
+                href="/servicii"
+                className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg text-center items-center justify-center transition-all cursor-pointer"
+              >
+                <h3 className="font-serif text-xl text-gray-900">{item.name}</h3>
+              </Link>
+            ))}
           </div>
 
           {/* Call to Action - Learn More */}
@@ -132,7 +87,7 @@ export default function Home() {
               href="/servicii"
               className="inline-block px-8 py-4 bg-gray-900 text-white font-sans text-sm rounded-full hover:bg-gray-800 transition-colors"
             >
-              Află mai mult despre servicii și tarife
+              {t('services.learn_more')}
             </Link>
           </div>
         </div>
@@ -144,31 +99,30 @@ export default function Home() {
      {/* Contact Section */}
 <section id="contact" className="py-20 px-6">
   <div className="max-w-6xl mx-auto">
-    <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
-      Contact
+          <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
+      {t('contact.title')}
     </h2>
     <p className="font-sans text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-      Nu trebuie să știi exact ce cauți. Trebuie doar să simți că ceva poate fi și altfel. <br />
-      Dacă ești aici, probabil că acel moment a venit. 
+      {t('contact.lead')}
     </p>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
       {/* Location Card */}
-      <a 
+            <a 
         href="https://www.google.com/maps/place/Cabinet+de+Psihologie+Irina+Gospodaru/@44.1952735,28.6382035,19.34z/data=!4m6!3m5!1s0x40bafb003241efe3:0x377ddf507091f2d4!8m2!3d44.1952502!4d28.6385552!16s%2Fg%2F11x7cxxz6c?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" 
         target="_blank"
         rel="noopener noreferrer"
         className="group p-6 bg-gray-800 border border-transparent rounded-2xl hover:bg-gray-900 transition-all shadow-sm"
       >
-        <div className="flex flex-col items-center text-center space-y-3">
+            <div className="flex flex-col items-center text-center space-y-3">
           <div className="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 group-hover:bg-white/20 transition-colors">
             <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C7.802 0 4.403 3.403 4.403 7.602c0 1.628.506 3.136 1.368 4.39L12 24l6.229-11.996c.872-1.269 1.378-2.777 1.378-4.402C19.607 3.403 16.208 0 12 0zm0 11a3 3 0 110-6 3 3 0 010 6z"/>
             </svg>
           </div>
           <div>
-            <h3 className="font-serif text-base text-white mb-0.5">Adresă</h3>
-            <p className="font-sans text-sm text-gray-300">Strada Primăverii 6, Constanta</p>
+            <h3 className="font-serif text-base text-white mb-0.5">{t('contact.address_label')}</h3>
+            <p className="font-sans text-sm text-gray-300">{t('contact.address_text')}</p>
           </div>
         </div>
       </a>
@@ -187,7 +141,7 @@ export default function Home() {
             </svg>
           </div>
           <div>
-            <h3 className="font-serif text-base text-white mb-0.5">WhatsApp</h3>
+            <h3 className="font-serif text-base text-white mb-0.5">{t('contact.whatsapp_label')}</h3>
             <p className="font-sans text-sm text-gray-300">+40 722 385 228</p>
           </div>
         </div>
@@ -207,8 +161,8 @@ export default function Home() {
             </svg>
           </div>
           <div>
-            <h3 className="font-serif text-base text-white mb-0.5">Facebook</h3>
-            <p className="font-sans text-sm text-gray-300">Psiholog Irina Gospodaru</p>
+            <h3 className="font-serif text-base text-white mb-0.5">{t('contact.facebook_label')}</h3>
+            <p className="font-sans text-sm text-gray-300">{t('contact.facebook_text') || 'Psiholog Irina Gospodaru'}</p>
           </div>
         </div>
       </a>
@@ -227,8 +181,8 @@ export default function Home() {
             </svg>
           </div>
           <div>
-            <h3 className="font-serif text-base text-white mb-0.5">Instagram</h3>
-            <p className="font-sans text-sm text-gray-300">@psiholog.irinagospodaru</p>
+            <h3 className="font-serif text-base text-white mb-0.5">{t('contact.instagram_label')}</h3>
+            <p className="font-sans text-sm text-gray-300">{t('contact.instagram_text') || '@psiholog.irinagospodaru'}</p>
           </div>
         </div>
       </a>
@@ -237,12 +191,10 @@ export default function Home() {
           {/* Cum programăm */}
           <div className="max-w-3xl mx-auto bg-white rounded-2xl p-8 md:p-10 border border-gray-200">
             <h3 className="font-serif text-2xl text-gray-900 mb-4">
-              Cum programăm prima ședință?
+              {t('contact.schedule_title')}
             </h3>
             <p className="font-sans text-lg text-gray-700 leading-relaxed">
-
-Pentru a face o programare, scrie-mi un mesaj pe WhatsApp în care să menționezi serviciul psihologic dorit. Vei fi contactat/ă în cel mai scurt timp pentru stabilirea programării.
-           
+              {t('contact.schedule_text')}
             </p>
           </div>
         </div>
@@ -252,7 +204,7 @@ Pentru a face o programare, scrie-mi un mesaj pe WhatsApp în care să mențione
       <footer className="bg-gray-900 py-12 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <p className="font-sans text-gray-400">
-            © 2026 Irina Gospodaru - Psihoterapeut Adlerian. Toate drepturile rezervate.
+            {t('footer.copyright')}
           </p>
         </div>
       </footer>

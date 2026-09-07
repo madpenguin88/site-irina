@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "articles": "ARTICLES",
+    "services": "SERVICES",
+    "faq": "FAQ",
+    "contact": "CONTACT",
+    "lang_toggle": "EN",
+    "tagline": "Adlerian Psychotherapist"
+  },
+  "backToTop": {
+    "label": "Back to top"
+  },
+  "alt": {
+    "profile": "Irina Gospodaru - Psychotherapist",
+    "individual": "Therapy setting",
+    "couple": "Couple therapy environment",
+    "family": "Family therapy room",
+    "recommendation_bg": "Background image",
+    "ryota_logo": "Ryota logo",
+    "ryota_name": "Ryota name logo",
+    "laura_bg": "Laura Popescu background",
+    "laura_logo": "Laura Popescu logo"
+  },
+  "despre": {
+    "title": "About Me",
+    "intro_lead": "I am a clinical psychologist and Adlerian psychotherapist.",
+    "intro_paragraph": "I chose this profession to stand alongside people when they decide to make real changes in their lives—changes they can truly feel and observe, to overcome challenging situations and experience real growth both personally and in social and professional relationships.",
+    "how_i_work_title": "How I work?",
+    "how_i_work_lead": "I believe real change doesn't happen only in the office but when it extends into daily life.",
+    "individual_title": "Individual Therapy",
+    "individual_p1": "Most often, people come into therapy carrying a story of difficulty: a relationship that no longer works or the absence of one, a persistent lack of self-confidence, a fragile self-image, work tensions, friendships that remain superficial, or simply an accumulation of anxiety and stress that has become hard to carry. In therapy we explore together the patterns that no longer serve you and build, step by step, new directions that make sense for you.",
+    "individual_p2": "What you discover and change in therapy then reflects in all important areas of your life, creating a ripple effect that transforms your experience in the world.",
+    "couple_title": "Couple Therapy",
+    "couple_p1": "Couple therapy does not take anyone's side — the relationship itself is what we support together. Whether we talk about infidelity and rebuilding trust, blocked communication or emotional distancing, the focus remains on you as a couple, not on finding blame.",
+    "couple_p2": "Both partners actively contribute to transforming the relationship, and the changes you make together become visible in your daily dynamics.",
+    "family_title": "Family Therapy",
+    "family_p1": "The client is the family. We work on parenting roles and how you can build a healthy way of life together, and everything you discover in therapy is adapted to your family's specific challenges. The goal is for each family member to feel they have their place, that their role matters, that they are capable, and that their presence is valuable.",
+    "family_p2": "What you discover in therapy takes root at home — in how you speak to each other, listen, and support one another day by day."
+    ,
+    "final_p1": "In therapy, there are no universal formulas — what works for one person may not be right for another.",
+    "final_p2": "For that reason, my approach centers on each person individually, on their rhythm and unique story. You are the expert of your own life, and I am here to accompany you in exploring what blocks you, to examine together patterns that no longer serve you, and to discover new directions meaningful for your growth."
+    ,
+    "professional_title": "Professional training",
+    "professional_lead": "Solid training and continuous improvement are essential for authentic and effective support.",
+    "university_title": "University education",
+    "university_list": [
+      "Bachelor in Business Management (4 years) - Canterbury Christ Church University, UK",
+      "Bachelor in Psychology (3 years) - Ovidius University, Constanța",
+      "Master in Psychotherapies and Clinical Psychology (2 years) - Tibiscus University, Timișoara"
+    ],
+    "postgrad_title": "Postgraduate training",
+    "postgrad_list": [
+      "Adlerian Psychotherapy training (2 years) - Alfred Adler Institute",
+      "Supervision in Adlerian Psychotherapy - Alfred Adler Institute",
+      "Supervision in Clinical Psychology"
+    ],
+    "professional_note": "I regularly attend training, workshops and seminars in the Adlerian approach, both nationally and internationally, alongside experienced psychotherapy specialists. Learning never stops — I continuously improve to be able to offer you the best possible support."
+  },
+  "recommendations": {
+    "subtitle": "Every step taken together brings us closer to a more emotionally stable world."
+    ,
+    "program_title": "Social and Emotional Development Program"
+    ,
+    "title": "Recommendations",
+    "collab_role": "Psychotherapist & Sexologist"
+  }
+  ,
+  "home": {
+    "hero_line1": "Welcome to",
+    "hero_line2": "your space for transformation",
+    "hero_paragraph": "Whatever brought you here, something in you wants to evolve. The path to a more fulfilled life begins with a single decision. Let's discover together what's possible.",
+    "cta_book": "Book a session"
+  },
+  "services": {
+    "title": "Services",
+    "lead": "Wherever you are on your path, there's a place to start—and you don't have to go alone.",
+    "learn_more": "Learn more about services and fees",
+    "book": "Book a session",
+    "prevention": "Psychological prevention is the wisest investment you can make in yourself. It's much easier to address things when they are only beginning to weigh on you than when they already overwhelm you.",
+    "urgent_line": "Don't wait for it to be urgent for it to become important.",
+    "categories": [
+      {
+        "label": "Individual",
+        "items": [
+          { "name": "Psychological assessment", "price": "300 RON", "note": "50 minutes" },
+          { "name": "Individual psychotherapy", "price": "300 RON", "note": "50 minutes" },
+          { "name": "Psychological counseling", "price": "300 RON", "note": "50 minutes" },
+          { "name": "Personal development", "price": "300 RON", "note": "50 minutes" }
+        ]
+      },
+      {
+        "label": "Couple & Family",
+        "items": [
+          { "name": "Couple psychotherapy", "price": "500 RON", "note": "90 minutes" },
+          { "name": "Family psychotherapy", "price": "500 RON", "note": "90 minutes" }
+        ]
+      },
+      {
+        "label": "Groups",
+        "items": [
+          { "name": "Support groups", "price": "200 RON", "note": "120 minutes" },
+          { "name": "Personal development groups", "price": "200 RON", "note": "120 minutes" }
+        ]
+      }
+    ],
+    "how_title": "How does it work?",
+    "how_p1": "The first session is dedicated to assessment and mutual understanding. Together we set therapy goals and session frequency.",
+    "how_p2": "Sessions can take place face-to-face in Constanta or online, depending on your preferences and needs."
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "You don't need to know exactly what you're looking for. You only need to feel that things can be different.",
+    "address_label": "Address",
+    "address_text": "Strada Primaverii 6, Constanta",
+    "whatsapp_label": "WhatsApp",
+    "facebook_label": "Facebook",
+    "facebook_text": "Psiholog Irina Gospodaru",
+    "instagram_label": "Instagram",
+    "instagram_text": "@psiholog.irinagospodaru",
+    "schedule_title": "How do we schedule the first session?",
+    "schedule_text": "To make an appointment, send me a WhatsApp message with the desired service. You will be contacted as soon as possible to set the appointment."
+  },
+  "articles": {
+    "title": "Articles",
+    "lead": "Articles about psychology, personal development and mental health.",
+    "error_fetch": "Failed to load articles. Make sure the API server is running.",
+    "empty": "There are no published articles yet. Check back soon!",
+    "read_more": "Read more →",
+    "back_home": "Back to home"
+  },
+  "article": {
+    "back_to_list": "← Back to articles",
+    "not_found": "Article not found.",
+    "load_error": "Could not load the article.",
+    "view_all": "View all articles"
+  },
+  "faq": {
+    "title": "Frequently asked questions about psychotherapy",
+    "items": [
+      {
+        "question": "How do I know if I need therapy?",
+        "answer": "If you're asking this, you probably already have an answer.\n\nPeople come to therapy when something stops working — anxiety that blocks them, persistent sadness, exhausting relationships, or the feeling of reacting the same way regardless of the situation.\n\nMany think therapy is only for crisis moments. In reality, therapy can also be preventive — it helps you know yourself better and avoid accumulating tensions that are harder to manage later. It's for anyone who wants to live better, understand themselves more deeply and discover healthier alternatives.\n\nWhatever your reason, here you'll find a safe space to explore what you feel and open new paths toward a more fulfilling life."
+      },
+      {
+        "question": "Is it confidential?",
+        "answer": "Yes, fully. Everything we discuss remains strictly confidential, except in situations where there is an imminent danger to your life or someone else's, or when the law requires reporting.\n\nThese legal exceptions include:\n• Imminent risk of suicide or serious self-harm\n• Risk of harming another person\n• Physical, sexual abuse or neglect of children or vulnerable adults\n• Court order requesting information\n\nYou will be clearly informed about these limits to confidentiality from the first session, as specified in the therapeutic agreement."
+      },
+      {
+        "question": "How does the psychotherapy process work?",
+        "answer": "Duration and intensity depend on your needs and goals. There is no rigid format — the process adapts to your rhythm and uniqueness.\n\nAdlerian psychotherapy is flexible: we can work on a specific problem using practical strategies, or explore relational patterns and the meaning of your behaviors to build lasting change. Some clients seek deep transformation and greater self-knowledge.\n\nAt the first meeting we decide together what you want. You don't need all the answers at the start — therapy can evolve, and the decision to continue or stop is always yours."
+      },
+      {
+        "question": "What happens during the first session?",
+        "answer": "We get to know each other and talk openly about what brought you to therapy — the reason you took this step and your expectations.\n\nYou'll tell me about your current situation and the broader context of your life — family, relationships, work — because I want to know you as a whole person, not only through the lens of a single problem.\n\nWe also sign the therapeutic agreement, which clarifies confidentiality, how we collaborate, and practical aspects of the process. It's essentially a natural conversation in a safe, non-judgmental space."
+      },
+      {
+        "question": "What should I talk about in therapy?",
+        "answer": "Anything that matters to you. There's no 'right' or 'wrong' topic — everyone brings a unique experience.\n\nYou can talk about current difficulties, relationships, overwhelming emotions, recurring thoughts, memories, dreams, doubts or moments of fulfillment. Even small things can reveal important aspects of how you function.\n\nFrom an Adlerian perspective, everything you bring has meaning and purpose — even if it's not obvious at first. I'm here to explore with you, encourage you and help you see new perspectives toward the goals you choose. You decide how much to share and at what pace. Therapy is your space."
+      },
+      {
+        "question": "How long until I see results?",
+        "answer": "There is no universal answer — each person is unique and progress varies. Sometimes changes appear from the first session — a new perspective, a sense of relief, or clarity that was missing. Other times, it takes several sessions to understand patterns and explore change options.\n\nSome clients choose a longer process for deeper transformations. We don't work on a fixed schedule but at your pace. Progress comes as you begin to understand how you operate and try new alternatives.\n\nResults depend on your engagement, willingness to change, and the collaborative relationship we build together. Allow yourself to evolve at your own pace — every small step matters."
+      },
+      {
+        "question": "Can I cancel or reschedule a session?",
+        "answer": "Yes, you can cancel or reschedule with at least 24 hours' notice by sending a message or calling. I understand unexpected situations happen. Sessions canceled with less than 24 hours' notice are charged in full. The cancellation policy is agreed upon at the first meeting and included in the therapeutic agreement."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Irina Gospodaru - Adlerian Psychotherapist. All rights reserved."
+  }
+}

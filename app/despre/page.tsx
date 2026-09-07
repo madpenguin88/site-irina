@@ -1,11 +1,13 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import BackToTop from "../components/BackToTop";
 import Navbar from "../components/Navbar";
+import { useT } from "../components/LanguageProvider";
 
 export default function DesprePage() {
+  const t = useT();
   return (
     <div className="min-h-screen bg-white">
       <Navbar activePage="despre" />
@@ -17,29 +19,29 @@ export default function DesprePage() {
       <div className="pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header with Photo */}
-          <div className="mb-16">
+            <div className="mb-16">
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-              {/* Left - Centered Image */}
-              <div className="relative h-[340px] md:h-[550px] order-2 md:order-1 flex items-center justify-center">
-                {/* Main profile image - centered */}
-                <div className="relative w-[220px] md:w-[340px] h-[240px] md:h-[440px] overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border-4 md:border-8 border-white">
+              {/* Left - Centered Image (mobile: full-width, placed above text) */}
+              <div className="relative h-auto md:h-[550px] order-1 md:order-1 flex items-center justify-center">
+                {/* Main profile image - full-width on mobile, fixed size on md+ */}
+                <div className="relative w-full md:w-[340px] h-[280px] md:h-[440px] overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border-4 md:border-8 border-white">
                   <Image
                     src="/pictures/irina.jpeg"
-                    alt="Irina Gospodaru - Psihoterapeut Adlerian"
+                    alt={t('alt.profile')}
                     fill
                     className="object-cover"
                     priority
                     quality={85}
-                    sizes="(max-width: 768px) 220px, 340px"
+                    sizes="(max-width: 768px) 100vw, 340px"
                   />
                 </div>
               </div>
 
-              {/* Right - Intro Text */}
-              <div className="space-y-6 pt-0 md:pt-12 order-1 md:order-2">
+              {/* Right - Intro Text (mobile: below image) */}
+              <div className="space-y-6 pt-6 md:pt-12 order-2 md:order-2">
                 <div>
                   <h1 className="font-serif text-4xl md:text-6xl text-gray-900 mb-4">
-                    Despre mine
+                    {t('despre.title')}
                   </h1>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="h-px w-16 bg-gray-300"></div>
@@ -49,10 +51,10 @@ export default function DesprePage() {
                 
                 <div className="font-sans text-lg text-gray-700 leading-relaxed space-y-5">
                   <p className="text-xl font-light">
-                    Sunt psiholog clinician și psihoterapeut adlerian.
+                    {t('despre.intro_lead')}
                   </p>
                   <p>
-                    Am ales această profesie pentru că vreau să fiu alături de oameni în momentele în care decid să facă schimbări reale în viața lor - schimbări pe care le pot simți și observa cu adevărat, să poată depăși situațiile provocatoare și să simtă o evoluție reală, atât pentru sine, cât și în relațiile sociale și profesionale.
+                    {t('despre.intro_paragraph')}
                   </p>
                   
                 </div>
@@ -63,31 +65,31 @@ export default function DesprePage() {
           {/* Cum lucrez */}
           <section className="mb-16 bg-gray-50 rounded-3xl p-8 md:p-12">
             <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
-              Cum lucrez?
+              {t('despre.how_i_work_title')}
             </h2>
             <p className="font-sans text-lg text-gray-600 mb-16 text-center max-w-3xl mx-auto">
-              Cred că schimbarea reală nu se întâmplă doar în cabinet, ci atunci când se extinde în viața de zi cu zi.
+              {t('despre.how_i_work_lead')}
             </p>
 
  {/* Section 1: Text Left, Image Right */}
- <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
-              <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm">
-                <h3 className="font-serif text-3xl text-gray-900">
-                  În terapia individuală
-                </h3>
-                <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Deși lucrăm împreună individual, țin cont de contextul tău relațional - familie, prieteni, colegi, istoricul tău personal, resursele și oportunitățile de mediu, dar și de scopurile și direcția pe care ți-o dorești în viață.
-                </p>
-                <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Ceea ce descoperi și schimbi în cabinet se reflectă apoi în toate relațiile tale importante, creând un efect de undă care transformă experiența ta în lume.
-                </p>
-              </div>
+ <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-stretch mb-16 md:mb-20">
+              <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm h-full">
+                  <h3 className="font-serif text-3xl text-gray-900">
+                    {t('despre.individual_title')}
+                  </h3>
+                  <p className="font-sans text-lg text-gray-700 leading-relaxed">
+                    {t('despre.individual_p1')}
+                  </p>
+                  <p className="font-sans text-lg text-gray-700 leading-relaxed">
+                    {t('despre.individual_p2')}
+                  </p>
+                </div>
               
               {/* Image on right - smaller on mobile */}
-              <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
+              <div className="relative h-[240px] md:h-full overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
                 <Image
                   src="/pictures/individual.jpg"
-                  alt="Therapy Setting"
+                  alt={t('alt.individual')}
                   fill
                   className="object-cover"
                   loading="eager"
@@ -99,12 +101,12 @@ export default function DesprePage() {
 
 
             {/* Section 2: Image Left, Text Right */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div className="grid md:grid-cols-2 gap-12 items-stretch mb-20">
               {/* Single image on left - visible on mobile, shown after text on mobile */}
-              <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl order-2 md:order-1">
+              <div className="relative h-[240px] md:h-full overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl order-2 md:order-1">
                 <Image
                   src="/pictures/cuplu.jpg"
-                  alt="Therapy Environment"
+                  alt={t('alt.couple')}
                   fill
                   className="object-cover"
                   loading="lazy"
@@ -113,39 +115,39 @@ export default function DesprePage() {
                 />
               </div>
               
-              <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm order-1 md:order-2">
+              <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm order-1 md:order-2 h-full">
                 <h3 className="font-serif text-3xl text-gray-900">
-                  În terapia de cuplu
+                  {t('despre.couple_title')}
                 </h3>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Abordarea este una comună - ambii parteneri contribuie activ la transformarea relației. Schimbările pe care le fac împreună devin vizibile în modul în care comunică, se înțeleg și se susțin reciproc.
+                  {t('despre.couple_p1')}
                 </p>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Nu lucrăm doar cu problemele, ci și cu resursele pe care le aveți deja ca pereche, construind pe ele pentru a crea o relație mai autentică și mai satisfăcătoare pentru amândoi.
+                  {t('despre.couple_p2')}
                 </p>
               </div>
             </div>
 
            
             {/* Section 3: Text Left, Image Right */}
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-20">
-              <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-stretch mb-16 md:mb-20">
+              <div className="space-y-5 bg-white p-6 md:p-8 rounded-2xl shadow-sm h-full">
                 <h3 className="font-serif text-3xl text-gray-900">
-                  Cu adolescenții și familiile lor
+                  {t('despre.family_title')}
                 </h3>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Lucrez pentru ca ceea ce adolescentul descoperă despre sine în terapie să fie susținut și acasă. Implicarea familiei face ca progresul să fie mai solid și mai durabil - toți învață cum să sprijine schimbarea.
+                  {t('despre.family_p1')}
                 </p>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Ceea ce se întâmplă în cabinet devine parte din viața de zi cu zi a întregii familii, creând un mediu în care schimbarea este nu doar posibilă, ci și susținută.
+                  {t('despre.family_p2')}
                 </p>
               </div>
               
               {/* Image on right - smaller on mobile */}
-              <div className="relative h-[240px] md:h-[350px] overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
+              <div className="relative h-[240px] md:h-full overflow-hidden rounded-xl md:rounded-2xl shadow-lg md:shadow-xl">
                 <Image
-                  src="/pictures/adolescent.jpg"
-                  alt="Therapy Room Detail"
+                  src="/pictures/familie.jpeg"
+                  alt={t('alt.family')}
                   fill
                   className="object-cover"
                   loading="lazy"
@@ -159,10 +161,10 @@ export default function DesprePage() {
             <div className="max-w-4xl mx-auto text-center bg-white p-8 md:p-12 rounded-2xl shadow-sm">
               <div className="space-y-5">
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  În terapie, nu există formule universale - ceea ce funcționează pentru tine poate să nu fie potrivit pentru altcineva.
+                  {t('despre.final_p1')}
                 </p>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  De aceea, abordarea mea se centrează pe fiecare persoană în parte, pe ritmul și povestea sa unică. Tu ești expertul propriei tale vieți, iar eu sunt acolo să te însoțesc în explorarea a ceea ce te blochează, să analizăm împreună tiparele care nu-ți mai sunt utile și să descoperi noi direcții care au sens pentru evoluția ta.
+                  {t('despre.final_p2')}
                 </p>
               </div>
             </div>
@@ -171,35 +173,34 @@ export default function DesprePage() {
           {/* Pregătire profesională */}
           <section className="mb-16">
             <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
-              Pregătire profesională
+              {t('despre.professional_title')}
             </h2>
             <p className="font-sans text-lg text-gray-600 mb-16 text-center max-w-3xl mx-auto">
-             Pregătirea solidă și perfecționarea continuă sunt esențiale pentru un sprijin autentic și eficient.
+              {t('despre.professional_lead')}
             </p>
             
             <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
               {/* Text - Universitară */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-full">
                 <h3 className="font-serif text-2xl text-gray-900 mb-6">
-                  Pregătire universitară
+                  {t('despre.university_title')}
                 </h3>
                 <ul className="space-y-4 font-sans text-lg text-gray-700 list-disc list-inside">
-                  <li>Licență în Business Management (4 ani) - Canterbury Christ Church University, UK</li>
-                  <li>Licență în Psihologie (3 ani) - Universitatea Ovidius, Constanța</li>
-                  <li>Master în Psihoterapii și Psihologie Clinică (2 ani) - Universitatea Tibiscus, Timișoara</li>
-      
+                  {(t('despre.university_list') || []).map((it: string, i: number) => (
+                    <li key={i}>{it}</li>
+                  ))}
                 </ul>
               </div>
 
               {/* Text - Post-universitară */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-full">
                 <h3 className="font-serif text-2xl text-gray-900 mb-6">
-                  Pregătire post-universitară
+                  {t('despre.postgrad_title')}
                 </h3>
                 <ul className="space-y-4 font-sans text-lg text-gray-700 list-disc list-inside">
-                  <li>Formare în Psihoterapie Adleriană (2 ani) - Institutul Alfred Adler</li>
-                  <li>Supervizare în Psihoterapie Adleriană - Institutul Alfred Adler</li>
-                  <li>Supervizare în Psihologie Clinică</li>
+                  {(t('despre.postgrad_list') || []).map((it: string, i: number) => (
+                    <li key={i}>{it}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -207,7 +208,7 @@ export default function DesprePage() {
             {/* Final note */}
             <div className="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 md:p-10 border-l-4 border-gray-900">
               <p className="font-sans text-lg text-gray-700 leading-relaxed italic">
-              Particip constant la training-uri, workshop-uri și seminarii din abordarea adleriană, atât la nivel național, cât și internațional, alături de specialiști cu experiență vastă în domeniul psihoterapiei. Învățarea nu se oprește niciodată - mă perfecționez continuu pentru a-ți putea oferi cel mai bun suport posibil.
+                {t('despre.professional_note')}
               </p>
             </div>
           </section>
@@ -215,10 +216,10 @@ export default function DesprePage() {
           {/* Colaborări Section */}
           <section id="recomandari" className="mb-16">
             <h2 className="font-serif text-4xl md:text-5xl text-gray-900 mb-4 text-center">
-              Recomandări
+              {t('recommendations.title')}
             </h2>
-            <p className="font-sans text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-              
+            <p className="font-sans text-base md:text-lg text-gray-600 mb-6 text-center max-w-3xl mx-auto italic">
+              {t('recommendations.subtitle')}
             </p>
             
             <div className="space-y-6">
@@ -232,7 +233,7 @@ export default function DesprePage() {
                 <div className="absolute inset-0 z-0">
                   <Image
                     src="/pictures/home-hero-featured-2.png"
-                    alt="Background"
+                    alt={t('alt.recommendation_bg')}
                     fill
                     className="object-cover opacity-100"
                     quality={75}
@@ -255,14 +256,14 @@ export default function DesprePage() {
                   <div className="flex items-center justify-center gap-4 mb-6">
                     <Image
                       src="/pictures/svgexport-1.svg"
-                      alt="Ryota Logo"
+                      alt={t('alt.ryota_logo')}
                       width={60}
                       height={60}
                       className="flex-shrink-0"
                     />
                     <Image
                       src="/pictures/svgexport-3.svg"
-                      alt="Ryota name Logo"
+                      alt={t('alt.ryota_name')}
                       width={80}
                       height={60}
                       className="flex-shrink-0 translate-y-2"
@@ -270,7 +271,7 @@ export default function DesprePage() {
                   </div>
                 
                   <p className="font-script text-2xl text-amber-900">
-                    Program de Dezvoltare Socială și Emoțională
+                    {t('recommendations.program_title')}
                   </p>
                 </div>
               </a>
@@ -284,7 +285,7 @@ export default function DesprePage() {
                 <div className="absolute inset-0 z-0">
                   <Image
                     src="/pictures/laurapopescu.png"
-                    alt="Laura Popescu background"
+                    alt={t('alt.laura_bg')}
                     fill
                     className="object-cover opacity-100"
                     quality={75}
@@ -306,7 +307,7 @@ export default function DesprePage() {
                   <div className="flex items-center justify-center mb-6">
                     <Image
                       src="/pictures/psihoterapeutpopesculaura-logo.webp"
-                      alt="Laura Popescu logo"
+                      alt={t('alt.laura_logo')}
                       width={220}
                       height={120}
                       className="h-auto w-auto max-w-[220px] object-contain"
@@ -314,7 +315,7 @@ export default function DesprePage() {
                   </div>
 
                   <p className="font-script text-2xl md:text-3xl text-amber-900 leading-tight">
-                    Psihoterapeut & Psihosexolog
+                    {t('recommendations.collab_role')}
                   </p>
                 </div>
               </a>
@@ -326,16 +327,16 @@ export default function DesprePage() {
           {/* Call to action */}
           <section className="bg-gray-800 rounded-4xl p-12 text-center">
             <h2 className="font-serif text-3xl text-white mb-4">
-              Programează o ședință
+              {t('services.book')}
             </h2>
             <p className="font-sans text-lg text-white mb-8">
-            Contactează-mă dacă ești pregătit/ă să faci primul pas spre schimbare.
+              {t('contact.lead')}
             </p>
             <Link 
               href="/#contact"
               className="inline-block px-8 py-4 bg-white text-gray-800 font-sans text-sm rounded-full hover:bg-emerald-50 transition-colors"
             >
-              Contactează-mă
+              {t('home.cta_book')}
             </Link>
           </section>
         </div>
@@ -345,7 +346,7 @@ export default function DesprePage() {
       <footer className="bg-gray-900 py-12 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <p className="font-sans text-gray-400">
-            © 2026 Irina Gospodaru - Psihoterapeut Adlerian. Toate drepturile rezervate.
+            {t('footer.copyright')}
           </p>
         </div>
       </footer>
