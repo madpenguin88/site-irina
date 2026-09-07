@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Open_Sans, Cormorant_Garamond, Great_Vibes, Cinzel } from "next/font/google";
-// @ts-expect-error - side-effect CSS import may not have type declarations
 import "./globals.css";
 import LanguageProvider from "./components/LanguageProvider";
 
