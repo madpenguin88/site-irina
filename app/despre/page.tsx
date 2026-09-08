@@ -23,16 +23,16 @@ export default function DesprePage() {
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
               {/* Left - Centered Image (mobile: full-width, placed above text) */}
               <div className="relative h-auto md:h-[550px] order-1 md:order-1 flex items-center justify-center">
-                {/* Main profile image - full-width on mobile, fixed size on md+ */}
-                <div className="relative w-full md:w-[340px] h-[280px] md:h-[440px] overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border-4 md:border-8 border-white">
+                {/* Main profile image - wider horizontal framing on both mobile and desktop */}
+                <div className="relative w-full md:w-[520px] h-[220px] md:h-[440px] overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl border-4 md:border-8 border-white">
                   <Image
-                    src="/pictures/irina.jpeg"
+                    src="/pictures/irina2.jpeg"
                     alt={t('alt.profile')}
                     fill
                     className="object-cover [object-position:50%_18%] md:object-center"
                     priority
                     quality={85}
-                    sizes="(max-width: 768px) 100vw, 340px"
+                    sizes="(max-width: 768px) 100vw, 520px"
                   />
                 </div>
               </div>
