@@ -27,7 +27,7 @@ export default function ServiciiPage() {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-4 text-center">
-              {t('services.title')} — {t('services.learn_more')}
+              {t('services.title')}
             </h2>
             <p className="font-sans text-lg text-gray-600 mb-6 text-center max-w-4xl mx-auto">
               {t('services.lead')}

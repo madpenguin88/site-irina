@@ -29,7 +29,7 @@ export default function DesprePage() {
                     src="/pictures/irina.jpeg"
                     alt={t('alt.profile')}
                     fill
-                    className="object-cover"
+                    className="object-cover [object-position:50%_18%] md:object-center"
                     priority
                     quality={85}
                     sizes="(max-width: 768px) 100vw, 340px"
